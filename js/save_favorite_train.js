@@ -4,7 +4,7 @@
 function savefav(traindetails){
     console.log(traindetails);
 
-   // console.log($("#favicon").attr('src','img/lf.png'));glyphicon glyphicon-heart
+
     var id="."+traindetails.number;
     if($(id).find("#favicon").hasClass('glyphicon glyphicon-heart-empty')){
         $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');

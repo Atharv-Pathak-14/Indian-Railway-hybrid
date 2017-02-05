@@ -535,7 +535,7 @@ var notgetting_data=false;
             var intersection_fav = _.intersectionBy(all_train_list, all_fav_train_list, 'number');
             intersection_fav.forEach(function(train) {
                 var id = "." + train.number;
-                $(id).find("#favicon").attr('src', 'img/Like.png');
+                $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');
             });
             $("#upcoming_trains").show();
 

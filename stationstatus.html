@@ -340,7 +340,7 @@
             var traindetails={'number':train.number,'name':train.name,'sourcedetails':sourcedetails};
             table += "<tr class=" + train.number + "><td></td><td id='name'  onclick='getlivestatusonclick("+JSON.stringify(traindetails)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" + train.name + "<br><strong>" + train.number + "</a></strong></td>" +
 
-                "<td><img src='img/lf.png' id='favicon' onclick='savefav("+JSON.stringify(traindetails)+")' ></td><td><p id='scharr'>" + train.scharr + "</p><p id='actarr'>"+train.actarr + "</p></td><td><p id='schdep'>" + train.schdep +"</p>"+"<p id='actdep'>"+ train.actdep+ "</td><td ><p id='delaytime'>"+train.delayarr+"</p><p>"+train.delaydep+"</p> </td></tr>";
+                "<td class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav("+JSON.stringify(traindetails)+")' ></td><td><p id='scharr'>" + train.scharr + "</p><p id='actarr'>"+train.actarr + "</p></td><td><p id='schdep'>" + train.schdep +"</p>"+"<p id='actdep'>"+ train.actdep+ "</td><td ><p id='delaytime'>"+train.delayarr+"</p><p>"+train.delaydep+"</p> </td></tr>";
 
         });
 
@@ -373,7 +373,7 @@ function request_live_station_status(sourcedetails,withinhours) {
         var intersection_fav=_.intersectionBy(all_coming_train_list,all_fav_train_list,'number');
         intersection_fav.forEach(function (train) {
             var id="."+train.number;
-            $(id).find("#favicon").attr('src','img/Like.png');
+            $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');
         });
     },function (error) {
         console.log(error);
