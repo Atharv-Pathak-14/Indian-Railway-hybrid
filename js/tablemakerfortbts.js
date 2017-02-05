@@ -5,7 +5,7 @@ function tablemakertbts(body) {
     return new Promise(function (resolve,reject) {
         all_train_list=[];
         var weeklist=['M','Tu','W','Th','F','Sa','Su'];
-        var table = "<table class='table table-striped' > <thead> <tr><th>Train</th> <th>Dep.Time</th> <th>Arr.Time</th> <th>Delay</th> </tr> </thead> <tbody>";
+        var table = "<table class='table table-striped' > <thead '> <tr class='no'><th>Train</th> <th>Dep.Time</th> <th>Arr.Time</th> <th>Delay</th> </tr> </thead> <tbody>";
         body.train.forEach(function (train) {
             var weekdata="<h7>";
             all_train_list.push({"number":train.number});

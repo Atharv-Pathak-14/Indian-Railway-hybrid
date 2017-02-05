@@ -196,6 +196,16 @@
         a:hover,a:active,a:visited{
           text-decoration: none;
         }
+        /*status*/
+        .status{
+          background-color:rgb(66,44,100);
+          color:white;
+          margin:10px;
+          font-size:20px ;
+          font-weight:lighter;
+          text-align:center;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+        }
     </style>
 
 
@@ -221,7 +231,7 @@
         </li>
     </ul>
 </nav>
-<br><br><br>
+<br><br><br><br>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -261,7 +271,7 @@
               </div></div></div></div></nav>
 
 <div class="mainpage" class="container" >
-    <div class="status" style="background-color:navy;color:white"> <p id="success"></p></div>
+    <div class="status"> <p id="success"></p></div>
     <div class="table" class="container-fluid "></div>
 
 </div>
@@ -345,14 +355,14 @@ function request_train_route(){
            return table_maker_for_train_route(body);
         },function (error) {
             $(".table").removeClass("spinner spinn");
-            $(".status").html( "<h3>error</h3>" );
+            $(".status").html( "<span>error</span>" );
             console.log(error);
         }).then(function (alldata) {
             $(".table").removeClass("spinner spinn");
-            $(".status").html( "<h3>"+train_details.number+" | "+train_details.name+""+"<br>"+alldata.weekdata+"</h3>" );
+            $(".status").html( "<span>"+train_details.number+" | "+train_details.name+""+"<br>"+alldata.weekdata+"</span>" );
             $(".table").html(alldata.tabledata);
         }).catch(function (error) {
-            $(".status").html( "<h3>Error Requesting:"+train_details.name+"("+train_details.number+")"+"<br> :"+ error+"</h3>" );
+            $(".status").html( "<span>Error Requesting:"+train_details.name+"("+train_details.number+")"+"<br> :"+ error+"</span>" );
            console.log(error);
         })
 
