@@ -273,6 +273,14 @@
             padding:0px 0px 0px 0px;
             margin:0px 0px 0px 0px;
         }
+        .date_here {
+            word-spacing:-0.8em;
+            padding:0px 0px 0px 0px;
+        }
+        .calendaricon{
+            padding:11px 6px 7px 6px;
+            margin:-1px 0px 0px 0px;
+        }
     </style>
 
 </head>
@@ -286,7 +294,7 @@
         myCalendar.hideTime();
         setFrom();
         myCalendar.attachEvent("onClick", function() {
-            $("#date_here").html(myCalendar.getFormatedDate(' %d %M %Y'));
+            $(".date_here").html(myCalendar.getFormatedDate((' %d %M %y')));
             //console.log(myCalendar.getFormatedDate('%d'+"-"+'%m'));
             date = myCalendar.getFormatedDate('%d');
             month = myCalendar.getFormatedDate('%m');
@@ -344,7 +352,7 @@
                 <div class="btn-group today_button animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
                     <button type="button" class="btn btn-primary sharp today active ">Today</button>
                     <button type="button" class="btn btn-primary sharp tomorrow">Tomorrow</button>
-                    <button type="button" class="btn btn-primary sharp calendaricon "><img src="img/calendericon.png" id="calendar_icon" style="margin-top:-5px"><span style="color:rgb(64,44,100)" id="date_here">&nbsp;</span></button>
+                    <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon"><span style="color:rgb(64,44,100)" class=""></span></button>
                 </div>
             </div>
 

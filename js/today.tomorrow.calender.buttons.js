@@ -21,7 +21,7 @@ $(document).ready(function() {
         // $(this).button('toggle');
         $(".utc").show();
         $(this).addClass('active').siblings().removeClass('active');
-        $("#date_here").html("");
+        $("#calendar_icon").html("");
         var d = new Date();
         date = d.getDate();
         if (date < 10) {
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $(".tomorrow").click(function() {
 
         $(this).addClass('active').siblings().removeClass('active');
-        $("#date_here").html("");
+        $("#calendar_icon").html("");
         var d = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
         date = d.getDate() ;
         if (date < 10) {

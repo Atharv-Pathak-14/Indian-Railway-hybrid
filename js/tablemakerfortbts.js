@@ -22,7 +22,7 @@ function tablemakertbts(body) {
             var traindetails={'number':train.number,'name':train.name,'sourcedetails':sourcedetails};
             table += "<tr class=" + train.number + "><td><k id='name'  onclick='getlivestatusonclick("+JSON.stringify(traindetails)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\"><strong>" + train.name + "</strong><br>" + train.number+ "</a></k>" +
 
-                "<k style='padding-left: 10px'><img src='img/lf.png' id='favicon' onclick='savefav("+JSON.stringify(traindetails)+")' ></k><p id='weekdays' style='margin-top: 10px'>"+weekdata+"</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time +  "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md' style='border-radius: 55%'><span class='glyphicon glyphicon-time'></span></button></div></td></tr>";
+                "<k style='padding-left: 10px' class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav("+JSON.stringify(traindetails)+")' ></k><p id='weekdays' style='margin-top: 10px'>"+weekdata+"</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time +  "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md' style='border-radius: 55%'><span class='glyphicon glyphicon-time'></span></button></div></td></tr>";
 
         });
 
