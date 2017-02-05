@@ -13,11 +13,11 @@ function livetrainstatus(train_no,fulldate) {
                 if(body.response_code==200) {
                     resolve(body);
                 }else if(body.response_code==510) {
-                    reject(body.response_code+"<br>"+"Sorry!!! Not able to fetch required Data!!!");
+                    reject(body.response_code+"<br class='status'>"+"Sorry!!! Not able to fetch required Data!!!");
                 }
                 else if(body.response_code==204){
                     console.log(body);
-                    reject( body.response_code+"<br>Not able to fetch required Data!!!Please Try after some time!!");
+                    reject( body.response_code+"<br class='status'>Not able to fetch required Data!!!Please Try after some time!!");
                 }else{
                     reject("check ur response code .it is not 200!!!! :<br>Error :" + body.response_code);
                 }

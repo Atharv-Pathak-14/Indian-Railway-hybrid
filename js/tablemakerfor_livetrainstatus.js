@@ -4,7 +4,7 @@
 function tablemakerforlivestatus(body,train_no,train_name) {
 
 
-    var livetabledata = "<table class='container-fluid table table-responsive'> <thead> <tr> <th>#</th><th>Station</th> <th>Sch. Arrival</th> <th>Sch. Departure</th><th>Delay</th></tr> </thead> </tbody>";
+    var livetabledata = "<table> <thead> <tr> <th>#</th><th>Station</th> <th>Sch. Arrival</th> <th>Sch. Departure</th><th>Delay</th></tr> </thead> </tbody>";
 
     if (body.current_station.latemin > 0) {
         var trainposition = "<h4 strong><span  id=\"trainname\" style=\"color:midnightblue\"></span></h4><h5>Current Position :</strong><p style=\"color:red\">" + body.position + "</p></h5>";
