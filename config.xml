@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.pointdeveloper.myapp"
+        versionCode = "1" 
+        version     = "1.0.0" >
+ 
+    <!-- versionCode is Android only -->
+    <!-- version is in major.minor.patch format --> 
+    <name>train app</name>
+ 
+    <description>
+        train schudule app
+    </description>
+ 
+    <author href="https://risna.com" email="rishabhnayak76@gmail.com">
+        rishabh nayak
+    </author>
+
+   <preference name="orientation" value="portrait" />
+  <preference name="fullscreen" value="true" />
+  <preference name="KeepRunning" value="false"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="android-build-tool" value="gradle" />  
+
+  <plugin name="cordova-plugin-whitelist" source="npm" />
+  <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+  <plugin name="cordova-plugin-inappbrowser" source="npm"/>
+  <plugin spec="https://github.com/floatinghotpot/cordova-admob-pro" source="git" />
+  <plugin name="cordova-plugin-network-information" source="npm" />
+  <plugin name="cordova-universal-clipboard" source="npm"/>
+  <plugin name="phonegap-plugin-barcodescanner" source="npm"/>
+  <plugin name="cordova-plugin-x-toast" />
+
+<plugin name="cordova-plugin-splashscreen" source="npm" />
+
+  <splash platform="android" qualifier="port-ldpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="port-mdpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="port-hdpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="port-xhdpi" src="img/dustbin3.png" />
+
+<splash platform="android" qualifier="land-ldpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="land-mdpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="land-hdpi" src="img/dustbin3.png" />
+<splash platform="android" qualifier="land-xhdpi" src="img/dustbin3.png" />
+
+<splash src="splash.png" />
+
+<preference name="SplashScreenDelay" value="2000" />
+
+</widget>

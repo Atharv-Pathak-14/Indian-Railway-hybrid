@@ -1,0 +1,39 @@
+h1 {
+    padding: 50px;
+}
+/*spinner*/
+.spinner {
+    margin: 0% 0% 0% 50%;
+    height: 160em;
+    width: 1.5em;
+    background-color: blue;
+    -webkit-animation: spinny 1s reverse infinite;
+}
+.spinn {
+    margin: 0% 0% 0% 50%;
+    height: 3em;
+    width: .05em;
+    background-color: blue;
+    -webkit-animation: spinny 1s reverse infinite;
+}
+@-webkit-keyframes spinny {
+    0% {
+        -webkit-transform: rotate(450deg) scale(1);
+        background-color: green;
+    }
+    100% {
+        -webkit-transform: rotate(90deg) scale(1);
+        background-color: blue;
+    }
+}
+.refresh {
+    -webkit-animation: refresh .7s infinite linear;
+}
+@-webkit-keyframes refresh {
+    from {
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+    to {
+        -webkit-transform: scale(1) rotate(360deg);
+    }
+}

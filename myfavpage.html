@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my fav page</title>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="font.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/apikey.js"></script>
+    <script src="js/favoritestorage.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/trainroute.js"></script>
+    <script src="js/trainstartday.js"></script>
+    <script src="js/tablemakerfor_livetrainstatus.js"></script>
+    <script src="js/TrainDelaytimeDisplay.js"></script>
+    <script src="js/today.tomorrow.calender.buttons.js"></script>
+    <script src="js/livetrainstatus.js"></script>
+    <script src="js/GetLiveStatusOnClick.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/loading_spinner.css">
+    <style>
+        *{
+
+            font-family: 'hello';
+        }
+
+        .spinner{
+            margin-top: 12px;
+            height:10em;
+            width:0.13em;
+        }
+        .ul{
+            list-style-type: none;
+            color:white;
+            background-color: rgb(66,44,100);
+        }
+        .title{
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+
+    </style>
+</head>
+<body  onload="loadmyfavtrains()">
+<nav class="container-fluid navbar-fixed-top ">
+    <ul class="ul row">
+        <li class="col-xs-12 title" style="font-size:25px">
+            TRAIN
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="tbts.m.1.html" style="color:white;font-family:'hello';">SEARCH</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="stationstatus.html" style="color:white;font-family:'hello'">STATUS</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;">ROUTE</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="myfavpage.html"  style="color:white;" ><img src="img/fav.png"width="19px"></a>
+        </li>
+    </ul>
+</nav>
+<br><br><br>
+
+
+
+
+
+
+<div></div>
+
+<script>
+    for_today_or_tommorow = 0;
+  // loadmyfavtrains();
+//    $(document).ready(function () {
+//        $("#favorite").find("#trains").html(itemdisplay);
+//    });
+
+</script>
+<div id="div7" style="padding-top: 50px"></div>
+<div id="favorite"><div id="trains"></div></div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" ><p id="trainname"></p><p id="currentposition"></p></h4>
+            </div>
+            <div class="modal-body">
+                <p class="tabledata"> </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
