@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Station Status</title>
+
+    <link rel="stylesheet" type="text/css" href="css/loading_spinner.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/apikey.js"></script>
+    <script src="js/tbts.js"></script>
+    <script src="js/trainroute.js"></script>
+    <script src="js/livetrainstatus.js"></script>
+    <script src="js/livestationstatus.js"></script>
+    <link rel="stylesheet" href="typeahead/jquery.typeahead.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="typeahead/jquery.typeahead.min.js"></script>
+    <script src="js/stationdata.js"></script>
+    <script src="js/tablemakerfortbts.js"></script>
+    <script src="js/today.tomorrow.calender.buttons.js"></script>
+    <script src="js/typeaheadtbts.js"></script>
+    <script src="js/ajax_success_error.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/trainstartday.js"></script>
+    <script src="js/tablemakerfor_livetrainstatus.js"></script>
+    <script src="js/TrainDelaytimeDisplay.js"></script>
+    <script src="js/favoritestorage.js"></script>
+    <script src="js/GetLiveStatusOnClick.js"></script>
+    <script src="js/upcoming_trains_functions.js"></script>
+
+    <script src="js/save_favorite_train.js"></script>
+    <script src="js/localstorage_stationStatus.js"></script>
+
+    <style>
+
+        * {
+        font-family: 'hello';
+        }
+        .spinner{
+            margin-top: 12px;
+            height:10em;
+            width:0.13em;
+        }
+        .sticky {
+            position:fixed;
+            top:0px;
+        }
+        .menu-padding {
+            top: 60px;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: rgb(64, 44, 100);
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: rgb(64, 44, 100);
+            box-shadow: none;
+        }
+        /*button sharp*/
+        /**************************
+      DEFAULT BOOTSTRAP STYLES
+      **************************/
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 10px 16px;
+        }
+
+        .btn-lg {
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: rgb(64, 44, 100);
+            border-color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open .dropdown-toggle.btn-primary {
+            background-color: #fff;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        /***********************
+      SHARP BUTTONS
+      ************************/
+
+        .sharp {
+            border-radius: 0;
+        }
+        /***********************
+      CUSTON BTN VALUES
+      ************************/
+
+        .btn {
+            padding: 10px 10px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: rgb(64, 44, 100);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: #ffffff;
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: #ffffff;
+            box-shadow: none;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        .box_button{
+      margin:0px 0px 15px 0px;
+      padding:3% 0px 0px 0px;
+        }
+        .navi{
+          padding:0px 0px 0px 0px;
+          margin:0px 0px 0px 0px;
+        }
+        .boxing{
+        margin:0px 10px 0px 10px;
+        padding:14px 14px 2px 21px;
+        -webkit-box-shadow: 0 10px 6px -6px #777
+        }
+        .ul{
+            list-style-type: none;
+            color:white;
+            background-color: rgb(66,44,100);
+        }
+        .title{
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--top logo bar-->
+<nav class="container-fluid navbar-fixed-top ">
+    <ul class="ul row">
+        <li class="col-xs-12 title" style="font-size:25px">
+            TRAIN
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="tbts.m.1.html" style="color:white;font-family:'hello';">SEARCH</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="stationstatus.html" style="color:white;font-family:'hello'"><u>STATUS</u></a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;">ROUTE</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="myfavpage.html"  style="color:white;" ><img src="img/fav1.png"width="19px"></a>
+        </li>
+    </ul>
+</nav>
+<br><br><br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header main">
+          <div class="container-fluid  " align="center">
+              <div class="btn-group btn-group-sm box_button animated flipInX " data-toggle="buttons" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+                <label class="btn btn-primary active" id="2hours" style="border-radius:0px">
+                    <input type="radio" name="options"  autocomplete="off" checked> 2 Hrs
+                </label>
+                <label class="btn btn-primary" id="4hours" style="border-radius:0px">
+                    <input type="radio" name="options"  autocomplete="off"> 4 Hrs
+                </label>
+            </div>
+          <div class=" boxing animated flipInX" style="background-color:rgb(64, 44, 100)">
+            <div class=" navbar-collapse navi " id="bs-example-navbar-collapse-1">
+              </div>
+                <form id="form" class="navbar-form ">
+
+                    <div class="typeahead__container">
+                        <div  class="typeahead__field">
+
+                        <span class="typeahead__query" >
+
+                            <input class="js-typeahead-station"
+                                   id="src"
+                                   type="text"
+                                   placeholder="station name/code"
+                                   autofocus
+                                   autocomplete="off">
+
+                        </span>
+                        </div>
+                    </div>
+
+
+                </form>
+          </div></div></div></div></nav>
+
+<div class="mainpage" class="container" >
+    <div class="status" style="background-color:navy;color:white"> <p id="success"></p></div>
+    <div class="table" class="container-fluid "></div>
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" ><p id="trainname"></p><p id="currentposition"></p></h4>
+            </div>
+            <div class="modal-body">
+                <p class="tabledata"> </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+   var all_coming_train_list=[];
+   var all_fav_train_list=[];
+   var sourcedetails="";
+   var within_hours=2;
+    typeof $.typeahead === 'function' && $.typeahead({
+        input: ".js-typeahead-station",
+        minLength: 1,
+        maxItem: 15,
+        //order: "asc",
+        hint: true,
+        offset: true,
+        emptyTemplate: 'No result for "{{query}}"',
+        display: ["code", "name"],
+        correlativeTemplate:true,
+        cache: true,
+        template: '<span>' +
+        '<span class="division"><button style="background:rgba(255,193,26,0.52)">{{code}}</button> | {{name}}</span>' +
+        '</span>',
+        source:stationdata,
+        callback: {
+            onClickAfter: function(node, a, item, event) {
+
+                  sourcedetails = item;
+                console.log(sourcedetails.code);
+                console.log(sourcedetails);
+                request_live_station_status(sourcedetails,within_hours);
+                $("#src").blur();
+                //request_live_station_status(sourcedetails,within_hours);
+               // $('#submit').trigger('click');
+            }
+        },
+
+    });
+
+   function table_for_live_station_status(body) {
+    return new Promise(function (resolve,reject) {
+        all_coming_train_list=[];
+
+        var table = "<table class='table table-striped'> <thead> <tr><th> </th><th>Train</th><th>Fav</th> <th>Arr.Time</th> <th>Dep. Time</th> <th>Delay</th> </tr> </thead> <tbody>";
+        body.train.forEach(function (train) {
+            all_coming_train_list.push({"number":train.number});
+            var traindetails={'number':train.number,'name':train.name,'sourcedetails':sourcedetails};
+            table += "<tr class=" + train.number + "><td></td><td id='name'  onclick='getlivestatusonclick("+JSON.stringify(traindetails)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" + train.name + "<br><strong>" + train.number + "</a></strong></td>" +
+
+                "<td><img src='img/lf.png' id='favicon' onclick='savefav("+JSON.stringify(traindetails)+")' ></td><td><p id='scharr'>" + train.scharr + "</p><p id='actarr'>"+train.actarr + "</p></td><td><p id='schdep'>" + train.schdep +"</p>"+"<p id='actdep'>"+ train.actdep+ "</td><td ><p id='delaytime'>"+train.delayarr+"</p><p>"+train.delaydep+"</p> </td></tr>";
+
+        });
+
+        resolve(table);
+    });
+}
+
+function request_live_station_status(sourcedetails,withinhours) {
+    $(".status").html("");
+    $(".table").html("");
+    $(".table").addClass("spinner spinn");
+    console.log(sourcedetails.code);
+    station=sourcedetails.code;
+    console.log(station);
+    var erroroccured=false;
+ storinglocallyStnSts(sourcedetails);
+    livestationstatus(station,withinhours).then(function (body) {
+        console.log(body);
+        $(".table").removeClass("spinner spinn");
+        return table_for_live_station_status(body);
+    },function (error) {
+        console.log(error);
+        $(".table").removeClass("spinner spinn");
+        erroroccured=true;
+        $( ".status" ).append( error );
+    }).then(function (table) {
+        if(erroroccured==false) {
+            $(".status").html("<h3>All Trains:" + sourcedetails.name + ",in next " + within_hours + " hrs</h3>");
+        }$(".table").html(table);
+        var intersection_fav=_.intersectionBy(all_coming_train_list,all_fav_train_list,'number');
+        intersection_fav.forEach(function (train) {
+            var id="."+train.number;
+            $(id).find("#favicon").attr('src','img/Like.png');
+        });
+    },function (error) {
+        console.log(error);
+        $(".table").removeClass("spinner spinn");
+        $( ".status" ).append( "<li>problem :" + error + "</li>" );
+    }).catch(function (error) {
+        console.log(error);
+        $( ".status" ).append( "<li>problem :" + error + "</li>" );
+    });
+}
+$(document).ready(function () {
+loadhistoryStnSts();
+    $("#2hours").click(function() {
+        console.log("hii baby !!! its 2");
+        within_hours=2;
+        if($("#src").val()!=="" && sourcedetails){
+            console.log("if matched");
+             console.log($("#src").val());
+            request_live_station_status(sourcedetails,within_hours);
+        }else{
+            console.log("else matched");
+            console.log($("#src").val());
+        }
+
+    });
+    $("#4hours").click(function() {
+        console.log("hii baby!!! its 4");
+        within_hours=4;
+
+        if($("#src").val()!=="" && sourcedetails){
+            console.log("if matched");
+            console.log($("#src").val());
+            request_live_station_status(sourcedetails,within_hours);
+        }else{
+            console.log("else matched");
+            console.log($("#src").val());
+        }
+
+    });
+});
+
+
+
+
+</script>
+</body>
+</html>

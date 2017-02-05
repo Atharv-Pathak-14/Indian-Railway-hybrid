@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Route/Live Status</title>
+    <link rel="stylesheet" type="text/css" href="css/loading_spinner.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/apikey.js"></script>
+    <script src="js/tbts.js"></script>
+    <script src="js/trainroute.js"></script>
+    <script src="js/livetrainstatus.js"></script>
+    <script src="js/livestationstatus.js"></script>
+    <link rel="stylesheet" href="typeahead/jquery.typeahead.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="typeahead/jquery.typeahead.min.js"></script>
+    <script src="js/traindata.js"></script>
+    <script src="js/tablemakerfortbts.js"></script>
+    <script src="js/today.tomorrow.calender.buttons.js"></script>
+
+    <script src="js/ajax_success_error.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/trainstartday.js"></script>
+    <script src="js/tablemakerfor_livetrainstatus.js"></script>
+    <script src="js/TrainDelaytimeDisplay.js"></script>
+    <script src="js/favoritestorage.js"></script>
+    <script src="js/GetLiveStatusOnClick.js"></script>
+    <script src="js/upcoming_trains_functions.js"></script>
+
+    <script src="js/save_favorite_train.js"></script>
+    <script src="js/mydates_maker_for_livetrain.js"></script>
+    <script src="js/localstorage_trainroute.js"></script>
+    <style>
+        * {
+          font-family: 'hello';
+        }
+        .spinner{
+            margin-top: 12px;
+            height:10em;
+            width:0.13em;
+        }
+        .sticky {
+            position:fixed;
+            top:0px;
+        }
+        .btn {
+            padding: 14px 24px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: rgb(64, 44, 100);
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: rgb(64, 44, 100);
+            box-shadow: none;
+        }
+        /*button sharp*/
+        /**************************
+ DEFAULT BOOTSTRAP STYLES
+ **************************/
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 10px 16px;
+        }
+
+        .btn-lg {
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: rgb(64, 44, 100);
+            border-color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open .dropdown-toggle.btn-primary {
+            background-color: #fff;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        /***********************
+ SHARP BUTTONS
+ ************************/
+
+        .sharp {
+            border-radius: 0;
+        }
+        /***********************
+ CUSTON BTN VALUES
+ ************************/
+
+        .btn {
+            padding: 10px 10px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: rgb(64, 44, 100);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: #ffffff;
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: #ffffff;
+            box-shadow: none;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        .box_button{
+          margin:0px 0px 0px 10px;
+          padding:10px 0px 18px 0px;
+        }
+        .boxing{
+          background-color: rgb(64,44,100);
+        margin:0px 10px 0px 10px;
+        padding:14px 14px 2px 21px;
+        -webkit-box-shadow: 0 10px 6px -6px #777
+        }
+        .ul{
+            list-style-type: none;
+            color:white;
+            background-color: rgb(66,44,100);
+        }
+        .title{
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--top logo bar-->
+<nav class="container-fluid navbar-fixed-top ">
+    <ul class="ul row">
+        <li class="col-xs-12 title" style="font-size:25px">
+            TRAIN
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="tbts.m.1.html" style="color:white;font-family:'hello';">SEARCH</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="stationstatus.html" style="color:white;font-family:'hello'">STATUS</a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;"><u>ROUTE</u></a>
+        </li>
+        <li class="col-xs-3" style="font-size:20px">
+            <a href="myfavpage.html"  style="color:white;" ><img src="img/fav1.png"width="19px"></a>
+        </li>
+    </ul>
+</nav>
+<br><br><br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="box_button" align="center">
+                <div class="btn-group btn-group-sm animated flipInX " data-toggle="buttons" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+                    <label class="btn btn-primary  active" id="route">
+                        <input type="radio" name="options"  autocomplete="off" checked> Route
+                    </label>
+                    <label class="btn btn-primary" id="live_status" >
+                        <input type="radio" name="options"  autocomplete="off"> Live
+                    </label>
+                </div>
+</div>
+              <div class="container-fluid boxing animated flipInX">  <form id="form" class="navbar-form ">
+
+                    <div class="typeahead__container">
+                        <div  class="typeahead__field">
+
+                        <span class="typeahead__query" >
+
+                            <input class="js-typeahead-train"
+                                   id="train"
+                                   type="text"
+                                   placeholder="train name/number"
+                                   autofocus
+                                   autocomplete="off">
+
+                        </span>
+
+                        </div>
+                    </div>
+
+
+                </form>
+              </div></div></div></div></nav>
+
+<div class="mainpage" class="container" >
+    <div class="status" style="background-color:navy;color:white"> <p id="success"></p></div>
+    <div class="table" class="container-fluid "></div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" ><p id="trainname"></p><p id="currentposition"></p></h4>
+            </div>
+            <div class="modal-body">
+                <p class="tabledata"> </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+var train_details="";
+var route_or_live=0;
+    typeof $.typeahead === 'function' && $.typeahead({
+        input: ".js-typeahead-train",
+        minLength: 1,
+        maxItem: 15,
+        //order: "asc",
+        hint: true,
+        offset: true,
+        emptyTemplate: 'No result for "{{query}}"',
+        display: ["number", "name"],
+        correlativeTemplate:true,
+        cache: true,
+        template: '<span>' +
+        '<span class="division"><button style="background:rgba(255,193,26,0.52)">{{number}}</button> | {{name}}</span>' +
+        '</span>',
+        source:traindata,
+        callback: {
+            onClickAfter: function(node, a, item, event) {
+
+                train_details = item;
+               // $('#submit span').trigger('click');
+
+                if(route_or_live==0) {
+                    request_train_route();
+                    $("#train").blur();
+                }else if(route_or_live==1){
+                    option_maker_for_live_TrainStatus();
+                    $("#train").blur();
+                }
+                console.log(train_details);
+
+            }
+        },
+
+    });
+
+$("#submit").click(function() {
+    console.log("submit button triggered");
+    if(route_or_live==0) {
+        request_train_route();
+    }else if(route_or_live==1){
+        option_maker_for_live_TrainStatus();
+    }
+});
+
+
+
+function request_train_route(){
+        storinglocally_trainroute(train_details);
+        $(".table").html("");
+        $(".table").addClass("spinner spinn");
+        trainroute(train_details.number).then(function (body) {
+           console.log(JSON.stringify(body));
+           return table_maker_for_train_route(body);
+        },function (error) {
+            $(".table").removeClass("spinner spinn");
+            $(".status").html( "<h3>error</h3>" );
+            console.log(error);
+        }).then(function (alldata) {
+            $(".table").removeClass("spinner spinn");
+            $(".status").html( "<h3>"+train_details.number+" | "+train_details.name+""+"<br>"+alldata.weekdata+"</h3>" );
+            $(".table").html(alldata.tabledata);
+        }).catch(function (error) {
+            $(".status").html( "<h3>Error Requesting:"+train_details.name+"("+train_details.number+")"+"<br> :"+ error+"</h3>" );
+           console.log(error);
+        })
+
+
+
+    }
+
+function table_maker_for_train_route(body){
+        return new Promise(function (resolve,reject) {
+
+            var tabledata="<table class=\"table table-striped \"> <thead> <tr> <th>#</th><th>Station</th> <th>Arr.</th> <th>Dep.</th><th>Dist.</th></tr> </thead> </tbody>";
+
+            var weeklist=['M','Tu','W','Th','F','Sa','Su'];
+            var weekdata="<h7>";
+            for(var l=0;l<7;l++){
+                if(body.train.days[l].runs=="Y"){
+
+                    weekdata+="<day style='color:white;margin-left: 7px'>"+weeklist[l]+"</day>";
+                } else if(body.train.days[l].runs=="N"){
+
+                    weekdata+="<day style='color:red;margin-left:7px'>"+weeklist[l]+"</day>";
+                }
+            }
+          console.log(weekdata);
+            var k=1;
+
+            body.route.forEach(function (route){
+
+                if(k==route.day) {
+                    tabledata +="<tr><td></td><td style='color:navy;' ><h4><strong>Day "+route.day+"</strong></h4></td><td></td><td></td><td></td></tr>";
+                    k++;
+                }
+                {
+                    tabledata += "<tr><td>" + route.no + "</td><td> " + route.fullname + "</td><td>" + route.scharr + " </td><td>" + route.schdep + " </td><td>" + route.distance + " </td></tr>";
+                }
+                });
+
+            alldata={"tabledata":tabledata,"weekdata":weekdata};
+            resolve(alldata);
+
+        });
+
+}
+
+function option_maker_for_live_TrainStatus(){
+    $(".status").html( "" );
+    storinglocally_trainroute(train_details);
+    $(".table").html("");
+    $(".table").addClass("spinner spinn");
+    trainroute(train_details.number).then(function (body) {
+        $(".status").html( "<h3>"+train_details.number+" | "+train_details.name+"</h3>" );
+        return days_of_run_finder_for_train(body);
+    },function (error) {
+        $(".table").removeClass("spinner spinn");
+    }).then(function (start_days_list) {
+        $(".table").removeClass("spinner spinn");
+        button_maker_for_list(start_days_list);
+        console.log(start_days_list);
+    },function (error) {
+        $(".table").removeClass("spinner spinn");
+        $(".table").html("<h4>"+error+"</h4>");
+    }).catch(function (error) {
+        console.log(error);
+    })
+}
+
+function button_maker_for_list(start_days_list){
+    $(".table").append("<h3>select Train Start Date:</h3><br>");
+    start_days_list.forEach(function(s) {
+
+        $(".table").append("<button class='btn btn-info' style='margin-top: 5px;margin-left: 15px' onclick='getlivestatusonclick_byDate("+JSON.stringify(train_details)+","+JSON.stringify(s.V_date)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" >"+s.D_date+"</button><br>");
+
+
+    });
+}
+function getlivestatusonclick_byDate(train_details,V_date) {
+train_no=train_details.number;
+train_name=train_details.name;
+
+        $(".tabledata").html("");
+        $(".tabledata").addClass("spinner spinn");
+        $("#currentposition").html("");
+        $("#trainname").html("");
+         trainroute(train_no).then(function (body) {
+            console.log(body);
+            return livetrainstatus(train_no,V_date);
+        },function (error) {
+            $(".tabledata").removeClass("spinner spinn");
+            $(".tabledata").append( "<li>problem :" + error + "</li>" );
+        }).then(function(body){
+            $(".tabledata").removeClass("spinner spinn");
+
+            return tablemakerforlivestatus(body,train_no,train_name);
+        },function (error) {
+            $(".tabledata").removeClass("spinner spinn");
+            $(".tabledata").append( "<li>problem :" + error + "</li>" );
+        }).catch(function (error) {
+            console.log("errror caught!!! :"+error);
+            $(".tabledata").removeClass("spinner spinn");
+            $(".tabledata").append( "<li>problem :" + error + "</li>" );
+        })
+
+
+
+}
+
+function days_of_run_finder_for_train(body){
+    return new Promise(function (resolve,reject) {
+
+
+    mydate_array_maker().then(function (mydates) {
+        console.log("ye my date creator function is working!!!");
+        console.log(mydates);
+        var norun = 0;
+        var train_start_dates = [];
+        mydates.forEach(function (mydates) {
+            console.log("here is the day code :" + JSON.stringify(body.train.days[mydates.day].runs));
+            if (body.train.days[mydates.day].runs == "Y") {
+                console.log(mydates.D_date);
+                train_start_dates.push(mydates);
+            } else {
+                norun++;
+            }
+        });
+        //   console.log(train_start_dates);
+        if (norun == 3) {
+            reject("Train has not Run from last 3 days!!!");
+        } else{
+            resolve(train_start_dates);
+    }
+    }).catch(function (error) {
+        console.log("here is the bug"+error);
+        reject(error);
+    });
+
+    });
+
+}
+
+
+$(document).ready(function () {
+loadhistory_trainroute();
+    $("#route").click(function() {
+        console.log("hii baby !!! its 2");
+          route_or_live=0;
+
+        if($("#train").val()!=="" && train_details){
+            console.log("if matched");
+            console.log($("#train").val());
+            request_train_route();
+        }else{
+            console.log("else matched");
+            console.log($("#train").val());
+        }
+
+    });
+    $("#live_status").click(function() {
+
+            route_or_live=1;
+
+        if($("#train").val()!=="" && train_details){
+            console.log("if matched");
+            console.log($("#train").val());
+            option_maker_for_live_TrainStatus();
+        }else{
+            console.log("else matched");
+            console.log($("#train").val());
+        }
+
+    });
+});
+
+
+
+
+</script>
+</body>
+</html>
