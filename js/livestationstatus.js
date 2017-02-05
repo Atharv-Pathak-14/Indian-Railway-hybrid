@@ -7,6 +7,7 @@ function livestationstatus(station,withinhours) {
 
         var url="http://api.railwayapi.com/arrivals/station/"+station+"/hours/"+withinhours+"/apikey/" + key[keyno] + "/";
         console.log("calling url :"+url);
+        setTimeout(function(){reject("Server is not Responding!!!")}, 6000);
         $.get(url, function (body, status) {
             if(status=="success") {
                 if(body.response_code==200) {

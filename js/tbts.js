@@ -6,7 +6,7 @@ function tbts(src,dst,date,month) {
 
         url = "http://api.railwayapi.com/between/source/" + src + "/dest/" + dst + "/date/" + date + "-" + month + "/apikey/" + key[keyno] + "/";
         console.log("calling url :"+url);
-
+        setTimeout(function(){reject("Server is not Responding!!!")}, 6000);
         $.get(url, function (body, status) {
             if(status=="success") {
                 if(body.response_code==200) {

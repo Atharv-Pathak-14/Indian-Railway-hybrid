@@ -8,7 +8,9 @@ function livetrainstatus(train_no,fulldate) {
 
         var url = "http://api.railwayapi.com/live/train/" + train_no + "/doj/" + fulldate + "/apikey/" + key[keyno] + "/";
         console.log("calling url :"+url);
+        setTimeout(function(){reject("Server is not Responding!!!")}, 6000);
         $.get(url, function (body, status) {
+
             if(status=="success") {
                 if(body.response_code==200) {
                     resolve(body);
@@ -25,5 +27,6 @@ function livetrainstatus(train_no,fulldate) {
                 reject("get request is not success");
             }
         });
+
     })
 }
