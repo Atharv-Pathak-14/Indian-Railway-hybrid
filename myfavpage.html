@@ -38,12 +38,18 @@
             list-style-type: none;
             color:white;
             background-color: rgb(66,44,100);
+            padding-bottom: 7px;
         }
         .title{
             padding:0px 0px 0px 0px;
             margin:0px 0px 0px 0px;
         }
-
+        .under{
+            border-bottom: 2px solid white;
+        }
+        a:hover,a:active,a:visited{
+          text-decoration: none;
+        }
     </style>
 </head>
 <body  onload="loadmyfavtrains()">
@@ -62,7 +68,7 @@
             <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;">ROUTE</a>
         </li>
         <li class="col-xs-3" style="font-size:20px">
-            <a href="myfavpage.html"  style="color:white;" ><img src="img/fav.png"width="19px"></a>
+            <a href="myfavpage.html"  style="color:white;" class="under" ><img src="img/fav.png"width="19px"></a>
         </li>
     </ul>
 </nav>
