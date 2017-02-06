@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train bw 2 Stations</title>
+    <link rel="stylesheet" type="text/css" href="css/loading_spinner.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/apikey.js"></script>
+    <script src="js/tbts.js"></script>
+    <script src="js/trainroute.js"></script>
+    <script src="js/livetrainstatus.js"></script>
+    <script src="js/livestationstatus.js"></script>
+    <link rel="stylesheet" href="typeahead/jquery.typeahead.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="font.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="typeahead/jquery.typeahead.min.js"></script>
+    <script src="js/stationdata.js"></script>
+    <script src="js/tablemakerfortbts.js"></script>
+    <script src="js/typeaheadtbts.js"></script>
+    <script src="js/ajax_success_error.js"></script>
+    <link rel="stylesheet" type="text/css" href="codebase/fonts/font_roboto/roboto.css" />
+    <link rel="stylesheet" type="text/css" href="codebase/dhtmlxcalendar.css" />
+    <script src="codebase/dhtmlxcalendar.js"></script>
+    <script src="js/today.tomorrow.calender.buttons.js"></script>
+    <script src="js/localstoragetbts.js"></script>
+    <script src="js/inputswap.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/trainstartday.js"></script>
+    <script src="js/tablemakerfor_livetrainstatus.js"></script>
+    <script src="js/TrainDelaytimeDisplay.js"></script>
+    <script src="js/favoritestorage.js"></script>
+    <script src="js/GetLiveStatusOnClick.js"></script>
+    <script src="js/upcoming_trains_functions.js"></script>
+    <script src="js/save_favorite_train.js"></script>
+
+    <style>
+        *{
+
+        font-family: 'hello';
+        }
+
+        .spinner {
+            margin-top: 12px;
+            height: 10em;
+            width: 0.13em;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0px;
+        }
+
+        .menu-padding {
+            top: 60px;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: rgb(64, 44, 100);
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: rgb(64, 44, 100);
+            box-shadow: none;
+        }
+        /*button sharp*/
+        /**************************
+ DEFAULT BOOTSTRAP STYLES
+ **************************/
+
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 10px 16px;
+        }
+
+        .btn-lg {
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: rgb(64, 44, 100);
+            border-color: rgb(64, 44, 100);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open .dropdown-toggle.btn-primary {
+            background-color: #fff;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        /***********************
+ SHARP BUTTONS
+ ************************/
+
+        .sharp {
+            border-radius: 0;
+        }
+        /***********************
+ CUSTON BTN VALUES
+ ************************/
+
+        .btn {
+            padding: 10px 10px;
+            border: 0 none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn-primary {
+            background: rgb(64, 44, 100);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open>.dropdown-toggle.btn-primary {
+            background: #ffffff;
+        }
+
+        .btn-primary:active,
+        .btn-primary.active {
+            background: #ffffff;
+            box-shadow: none;
+            color: rgb(64, 44, 100);
+            border: 0px solid rgb(64, 44, 100);
+        }
+        /*search box*/
+
+        .search_box {
+            background-color: rgb(64, 44, 100);
+            margin: 4% 4% 4% 4%;
+            padding: 4% 0% 4% 0%;
+        }
+        /*button_position*/
+
+        .button_position {
+            padding: 0% 0% 0% 0%;
+            margin: 0% 0% 0% 0%;
+        }
+        /*todat tomorrow*/
+        .today_tomorrow{
+          padding:5% 0% 5% 0%;
+          margin:15% 0% 0% 0%;
+        }
+      .today_button{
+        margin:0% 0% 0% 0%;
+        padding:0% 0% 0% 0%;
+      }
+      /*main table for train b/w 2 station*/
+      .responsive_table{
+        border:0px solid white;
+        padding:0% 0% 0% 0%;
+        margin:0% 0% 0% 0%;
+      }
+      /*status*/
+      .status{
+        background-color:rgb(66,44,100);
+        color:white;
+        margin:10px;
+        font-size:20px ;
+        font-weight:lighter;
+        text-align:center;
+      }
+
+
+      /*dustbin*/
+      .trash{
+
+        padding:15px 10px 15px 0px;
+        margin:0px 0px 0px 0px;
+      }
+      /*history table*/
+      .hist{
+        position:absolute;
+        font-size: 15px;
+          padding:9px 0px 0px 8px;
+          margin:0px 0px 0px 0px;
+      }
+      .main_history_table{
+        -webkit-shadow-box:0 10px 6px -6px #fff;
+      }
+      #table_row{
+        background-color: white;
+
+      }
+      #table_data{
+        border:0px solid  rgb(244,244,244);
+        padding:10px 0px 10px 12px;
+        margin:0px 0px 0px 0px;
+      }
+      #data_hist{
+        font-size:15px;
+        color:black;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+
+      }
+        .ul{
+            list-style-type: none;
+            color:white;
+            background-color: rgb(66,44,100);
+        }
+        .title{
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .ul{
+            list-style-type: none;
+            color:white;
+            background-color: rgb(66,44,100);
+            padding-bottom: 7px;
+        }
+        .title{
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .date_here {
+            word-spacing:-0.8em;
+            padding:0px 0px 0px 0px;
+        }
+        .calendaricon{
+            padding:5px 4px 5px 7px;
+            margin:6% 0px 0px 2%;
+        }
+        .glyphicon-heart-empty,.glyphicon-heart{
+            color:rgb(66,44,100);
+            font-size: 20px;
+        }
+        .under{
+            border-bottom: 2px solid white;
+        }
+        a:hover,a:active,a:visited{
+          text-decoration: none;
+        }
+        .table-striped{
+          -webkit-box-shadow: 0 10px 6px -6px #777;
+        }
+        .no{
+          display:none;
+        }
+    </style>
+
+</head>
+<script>
+    var myCalendar;
+
+    function doOnLoad() {
+        myCalendar = new dhtmlXCalendarObject({
+            button: "calendar_icon"
+        });
+        myCalendar.hideTime();
+        setFrom();
+        myCalendar.attachEvent("onClick", function() {
+            $(".date_here").html(myCalendar.getFormatedDate((' %d %M %y')));
+            //console.log(myCalendar.getFormatedDate('%d'+"-"+'%m'));
+            date = myCalendar.getFormatedDate('%d');
+            month = myCalendar.getFormatedDate('%m');
+            daydiscription = myCalendar.getFormatedDate(' %d %M');
+            console.log("calender set :" + date + "-" + month + "-" + year);
+            submitform();
+        });
+
+    }
+
+    function setFrom() {
+        var d = new Date();
+        date = d.getDate();
+        if (date < 10) {
+            date = "0" + date;
+        }
+        month = d.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+        year = d.getFullYear();
+        var disablecalenderpart = year + "-" + (month) + "-" + (date);
+        console.log("todays date is :" + disablecalenderpart);
+        myCalendar.setSensitiveRange(disablecalenderpart, null);
+
+    }
+</script>
+
+<body onload="doOnLoad();" data-spy="scroll" data-target=".navbar" data-offset="">
+    <div class="train_bw_2_station">
+        <!--top logo bar-->
+        <nav class="container-fluid navbar-fixed-top ">
+            <ul class="ul row">
+                <li class="col-xs-12 title" style="font-size:25px">
+                    TRAIN
+                </li>
+                <li class="col-xs-3" style="font-size:16.5px">
+                    <a href="tbts.m.1.html" style="color:white;font-family:'hello';" class="under">SEARCH</a>
+                </li>
+                <li class="col-xs-3" style="font-size:16.5px">
+                    <a href="stationstatus.html" style="color:white;font-family:'hello'">STATUS</a>
+                </li>
+                <li class="col-xs-3" style="font-size:16.5px">
+                    <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;">ROUTE</a>
+                </li>
+                <li class="col-xs-3" style="font-size:16.5px">
+                    <a href="myfavpage.html"  style="color:white;" class='glyphicon glyphicon-heart-empty' ></a>
+                </li>
+            </ul>
+        </nav>
+        <br>
+        <!--today,tomorrow-->
+        <nav class="navbar navbar-default  today_tomorrow" align="center">
+
+            <div class="daten" align="center">
+                <div class="btn-group today_button animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+                    <button type="button" class="btn btn-primary sharp today active ">Today</button>
+                    <button type="button" class="btn btn-primary sharp tomorrow">Tomorrow</button>
+                </div>
+                <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon" style='border-radius:40px;float:right;position:absolute'><span style="color:rgb(64,44,100)"></span></button>
+            </div>
+
+            <div class="container-fluid search_box animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+
+                <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form id="form" class="navbar-form ">
+                        <div class="row">
+                            <div class="typeahead__container colum">
+                                <div class="typeahead__field">
+
+                                    <span class="typeahead__query">
+                            <input class="js-typeahead-src"
+                                   id="src"
+                                   type="text"
+                                   placeholder="source station"
+                                   autofocus
+                                   autocomplete="off">
+
+                        </span>
+                                </div>
+                            </div>
+
+                            <!--<button>favorite</button>-->
+                            <div class="typeahead__container colum">
+                                <div class="typeahead__field">
+                                    <span class="typeahead__query">
+                            <input class="js-typeahead-dst"
+                                   id="dst"
+                                   type="text"
+                                   placeholder="destination station"
+                                   autofocus
+                                   autocomplete="off">
+
+                        </span>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                </div>
+
+                <span class="typeahead__button search">
+          <div class="container-fluid" align="center">
+            <!--<button class="btn btn-default" type="submit" id="submit">-->
+                <!--<span class="typeahead__search-icon"></span>-->
+
+                <!--</button>-->
+                <button onclick="swap()" style="margin-left: 2px" type="button" class="btn btn-default btn-md"><span class="glyphicon glyphicon-sort"></span></button>
+                <button type="button" style="margin-left: 2px" class="btn btn-default btn-md" onclick="upcoming_trains_for_Destination()" id="upcoming_trains">UPcoming Trains</button>
+                <button type="button" style="margin-left: 2px" id="scroll"><a href="#section1"><span></span></a></button>
+            </div>
+            </span>
+    </div>
+    </nav>
+    </div>
+    <!--train b/wstation table-->
+    <div class="mainpage container-fluid" style="background-color:rgb(244,244,244);">
+      <div  class="status" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+          <p id="success"></p>
+      </div>
+        <div class="table-responsive responsive_table">
+            <div class="table"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="container-fluid modal fade" id="myModal" role="dialog">
+        <div class="container-fluid modal-dialog">
+
+            <!-- Modal content-->
+            <div class="container-fluid modal-content">
+                <div class="container-fluid modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><p id="trainname"></p><p id="currentposition"></p></h4>
+                </div>
+                <div class="container-fluid modal-body">
+                    <p class="tabledata"> </p>
+
+                </div>
+                <div class="container-fluid modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    var daydiscription = "Today";
+    var sourcedetails = "";
+    var destinationdatails = "";
+    var date = "",
+        month = "",
+        year = "",
+        for_today_or_tommorow = 0;
+    var all_train_list = [];
+    var all_fav_train_list = [];
+    var all_upcoming_train_list = [];
+    $("#scroll").hide();
+    $("#upcoming_trains").hide();
+
+    $(document).ready(function(k) {
+        loadhistorytbts();
+        $("#src").focus();
+        console.log('fetching local storage!!1');
+
+    });
+
+
+
+    function submitform() {
+        if ($("#src").val() != "" && $("#dst").val() != "") {
+
+            $(".status").html("");
+            $(".table").html("");
+            $("#dst").blur();
+            $("#src").blur();
+
+            $(".table").addClass("spinner spinn");
+            requesttbts(sourcedetails, destinationdatails);
+
+            var srcdst = {
+                "sourcedetails": sourcedetails,
+                "destinationdatails": destinationdatails
+            };
+            storinglocallytbts(srcdst);
+        } else if ($("#src").val()== "") {
+            $("#src").focus();
+        } else if ($("#dst").val()== "") {
+            $("#dst").focus();
+        } else {
+            console.log("unknown fuction under submit button!!!");
+            $("#src").focus();
+        }
+    }
+
+
+    function requesttbts(sourcedetails, destinationdetails) {
+var notgetting_data=false;
+        tbts(sourcedetails.code, destinationdetails.code, date, month).then(function(body) {
+            console.log(body);
+            favorite_train_list_creator();
+            $(".table").removeClass("spinner spinn");
+            return tablemakertbts(body);
+        }, function(error) {
+            $(".table").removeClass("spinner spinn");
+            notgetting_data=true;
+            $(".status").html("Problem:"+error );
+            console.log("problem :" + error);
+
+        }).then(function(table) {
+            if(notgetting_data==false) {
+                $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + "," + daydiscription);
+            }
+            $(".table").html(table);
+            var intersection_fav = _.intersectionBy(all_train_list, all_fav_train_list, 'number');
+            intersection_fav.forEach(function(train) {
+                var id = "." + train.number;
+                $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');
+            });
+            $("#upcoming_trains").show();
+
+        },function (error) {
+            $(".table").removeClass("spinner spinn");
+            $(".status").html("Problem:"+error );
+            console.log("problem :" + error);
+        }).catch(function(error) {
+            $(".table").removeClass("spinner spinn");
+            console.log("errror caught!!! :" + error);
+            $(".status").append("<li>problem : " + error + "</li>");
+        });
+
+    }
+
+
+
+
+    function gettraindelaytime(train_no) {
+        var id = "." + train_no;
+
+        $(".table").find(id).find("#delaytime").html("<span><img src=\"img/hourglass.svg\" style=\"height: 35px\"></span>");
+        trainroute(train_no).then(function(body) {
+            console.log(body);
+            return trainstartday(body, sourcedetails, for_today_or_tommorow);
+        }, function(error) {
+            $('.status').html("<li>problem :" + error + "</li>");
+            //  $(id ).find('#errormsg').append( "<li>problem :" + error + "</li>" );
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+
+        }).then(function(tsfulldate) {
+            console.log("this is ur train start date :" + tsfulldate);
+
+            return livetrainstatus(train_no, tsfulldate);
+        }, function(error) {
+            $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+        }).then(function(body) {
+            return traindelaytimedisplay(body, train_no);
+        }, function(error) {
+            $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+
+        }).catch(function(error) {
+            console.log("errror caught!!! :" + error);
+            $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+
+        })
+    }
+
+
+
+/*   $(document).ready(function() {
+
+        var menu = $('.table');
+        var origOffsetY = menu.offset().top;
+        console.log("this is offset" + origOffsetY);
+
+        function scroll() {
+            console.log("scroll function on work!!!");
+            if ($(window).scrollTop() > origOffsetY) {
+                // $('.navbar-static-top').addClass('sticky');
+                $('.table').addClass('menu-padding');
+                $('.table').find('thead').addClass('sticky');
+                //   $('.table').find('thead').css('backgroundColor','navy');
+                //   $('.table').find('thead').css('color','white');
+                //    $('.table').find('thead').css('padding-left','1em');
+            } else {
+                //  $('.table').find('thead').css('backgroundColor','white');
+                //  $('.table').find('thead').css('color','black');
+                // $('.navbar-static-top').removeClass('sticky');
+                $('.table').removeClass('menu-padding');
+                $('.table').find('thead').removeClass('sticky');
+            }
+
+
+        }
+
+        document.onscroll = scroll;
+
+    });*/
+</script>
+
+</html>
