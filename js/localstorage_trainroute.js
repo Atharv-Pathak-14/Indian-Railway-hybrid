@@ -39,7 +39,7 @@ function storinglocally_trainroute(traindetails) {
 function loadhistory_trainroute(){
 
 
-    var itemdisplay="<table class=\"table table-condensed centered\"> <thead><tr><th></th></tr><div class='search glyphicon glyphicon-trash style='float:right;background-color:' '  onclick=\"clear_cache()\" ></div>";
+    var itemdisplay="<table class=\"table table-condensed centered\"> <thead><tr></tr><h3 class='search glyphicon glyphicon-trash' style='float:right;background-color:rgb(248,248,248)'   onclick=\"clear_cache()\" ></h3>";
 
     var fetchdata=JSON.parse(localStorage.getItem("mydata_route"));
     try {
@@ -58,7 +58,7 @@ function loadhistory_trainroute(){
                     count++;
                     try {
 
-                        itemdisplay += "<tr ><td style='border-bottom-style:resize: both;'><a href='#' onclick='historyonclick(" + JSON.stringify(fetchdata[k]) +")' style='color: rgb(0,49,113)'>" + fetchdata[k].number + " | " + fetchdata[k].name + "</a></td></tr>";
+                        itemdisplay += "<tr ><td style='border:2px solid rgb(248,248,248);background-color:rgb(248,248,248);-webkit-shadow-box:10px 6px -6px black;text-align:center;' ><a href='#' onclick='historyonclick(" + JSON.stringify(fetchdata[k]) +")' style='color:black;text-align:center'>" + fetchdata[k].number + " | " + fetchdata[k].name + "</a></td></tr>";
                     }catch(error){
                         console.log("here is the bug inside itemdisplay means:"+error);
                     }

@@ -55,7 +55,7 @@ function loadhistoryStnSts(){
                     count++;
                     try {
 
-                        itemdisplay += "<tr style='border:2px solid rgb(248,248,248);background-color:rgb(248,248,248);-webkit-shadow-box:10px 6px -6px black'class=''><td style='text-align:center'><a style='color:black' href='#' onclick='historyonclick(" + JSON.stringify(fetchdata[k]) +")' style='color: rgb(0,49,113)'>" + fetchdata[k].name + " (" + fetchdata[k].code + ")</a></td></tr>";
+                        itemdisplay += "<tr style='border:2px solid rgb(248,248,248);background-color:rgb(248,248,248);-webkit-shadow-box:10px 6px -6px black'><td style='text-align:center'><a style='color:black' href='#' onclick='historyonclick(" + JSON.stringify(fetchdata[k]) +")' style='color:black'>" + fetchdata[k].name + " (" + fetchdata[k].code + ")</a></td></tr>";
                     }catch(error){
                         console.log("here is the bug inside itemdisplay means:"+error);
                     }

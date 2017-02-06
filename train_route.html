@@ -142,6 +142,7 @@
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
+
         }
 
         .btn:focus,
@@ -173,6 +174,7 @@
         .box_button{
           margin:0px 0px 0px 10px;
           padding:10px 0px 18px 0px;
+
         }
         .boxing{
           background-color: rgb(64,44,100);
@@ -207,17 +209,17 @@
         <li class="col-xs-12 title" style="font-size:25px">
             TRAIN
         </li>
-        <li class="col-xs-3" style="font-size:20px">
+        <li class="col-xs-3" style="font-size:17px">
             <a href="tbts.m.1.html" style="color:white;font-family:'hello';">SEARCH</a>
         </li>
-        <li class="col-xs-3" style="font-size:20px">
+        <li class="col-xs-3" style="font-size:17px">
             <a href="stationstatus.html" style="color:white;font-family:'hello'">STATUS</a>
         </li>
-        <li class="col-xs-3" style="font-size:20px">
+        <li class="col-xs-3" style="font-size:17px">
             <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;" class="under">ROUTE</a>
         </li>
-        <li class="col-xs-3" style="font-size:20px">
-            <a href="myfavpage.html"  style="color:white;" ><img src="img/fav1.png"width="19px"></a>
+        <li class="col-xs-3" style="font-size:17px">
+            <a href="myfavpage.html"  style="color:white;" class="glyphicon glyphicon-heart-empty"></a>
         </li>
     </ul>
 </nav>
@@ -228,11 +230,11 @@
         <div class="navbar-header">
             <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
 <div class="box_button" align="center">
-                <div class="btn-group btn-group-sm animated flipInX  " data-toggle="buttons" style="-webkit-box-shadow: 0 10px 6px -6px #777;border-radius: 0px;">
-                    <label class="btn btn-primary  active" id="route">
+                <div class="btn-group  btn-group-sm  animated flipInX  " data-toggle="buttons" style="-webkit-box-shadow: 0 10px 6px -6px #777;border-radius: 0px;">
+                    <label class="btn btn-primary  active" id="route" style="border-radius:0px">
                         <input type="radio" name="options"  autocomplete="off" checked> Route
                     </label>
-                    <label class="btn btn-primary" id="live_status" >
+                    <label class="btn btn-primary" id="live_status" style="border-radius:0px" >
                         <input type="radio" name="options"  autocomplete="off"> Live
                     </label>
                 </div>
@@ -260,8 +262,8 @@
                 </form>
               </div></div></div></div></nav>
 
-<div class="mainpage" class="container" >
-    <div class="status" style="background-color:navy;color:white"> <p id="success"></p></div>
+<div class="mainpage container-fluid" >
+    <div class="status" style="background-color:rgb(244,244,244);color:black;text-align:center;"> <p id="success"></p></div>
     <div class="table" class="container-fluid "></div>
 
 </div>
@@ -370,10 +372,10 @@ function table_maker_for_train_route(body){
             for(var l=0;l<7;l++){
                 if(body.train.days[l].runs=="Y"){
 
-                    weekdata+="<day style='color:white;margin-left: 7px'>"+weeklist[l]+"</day>";
+                    weekdata+="<day style='color:rgb(66,44,100);margin-left: 7px;font-size:17px'>"+weeklist[l]+"</day>";
                 } else if(body.train.days[l].runs=="N"){
 
-                    weekdata+="<day style='color:red;margin-left:7px'>"+weeklist[l]+"</day>";
+                    weekdata+="<day style='color:red;margin-left:7px;font-size:17px''>"+weeklist[l]+"</day>";
                 }
             }
           console.log(weekdata);
@@ -420,10 +422,10 @@ function option_maker_for_live_TrainStatus(){
 }
 
 function button_maker_for_list(start_days_list){
-    $(".table").append("<h3>select Train Start Date:</h3><br>");
+    $(".table").append("<h4>Select Train Start Date:</h4><br>");
     start_days_list.forEach(function(s) {
 
-        $(".table").append("<button class='btn btn-info' style='margin-top: 5px;margin-left: 15px' onclick='getlivestatusonclick_byDate("+JSON.stringify(train_details)+","+JSON.stringify(s.V_date)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" >"+s.D_date+"</button><br>");
+        $(".table").append("<button class='btn btn-primary sharp' style='margin-top: 5px;margin-left: 15px;color:white;font-size:15px;'  onclick='getlivestatusonclick_byDate("+JSON.stringify(train_details)+","+JSON.stringify(s.V_date)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" >"+s.D_date+"</button><br></div>");
 
 
     });

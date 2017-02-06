@@ -34,7 +34,7 @@ function loadmyfavtrains(){
 
     // var itemdisplay="<div id='history'>";
   //  var itemdisplay="<table class=\"table  \"> <thead><h2 class='search'>History<img src='dustbin.png' onclick=\"clear_cache()\" style='float:right' width='30px'></thead>";
-    var itemdisplay = "<table class=\"table table-striped \"> <thead> <tr> <th ></th> <th>            </th> <th>               </th> </tr> </thead> <tbody>";
+    var itemdisplay = "<table class=\"table table-striped \"> <thead> </thead> <tbody>";
 
     var fetchdata=JSON.parse(localStorage.getItem("mydatafav"));
     try {
@@ -55,10 +55,10 @@ function loadmyfavtrains(){
                     count++;
                     try {
 
-                        itemdisplay += "<tr class='" + fetchdata[k].number + "'><td id='" + fetchdata[k].number +  "'onclick='getlivestatusonclick("+JSON.stringify(fetchdata[k])+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" +
+                        itemdisplay += "<tr class='" + fetchdata[k].number + "' style='border:2px solid white '><td id='" + fetchdata[k].number +  "'onclick='getlivestatusonclick("+JSON.stringify(fetchdata[k])+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" +
 
                             fetchdata[k].name + "<br><strong>" + fetchdata[k].number + "</a></strong><br><p id='trainstatus'></p></td><td>" + "    " +
-                            "</td><td id='delaytime' ><button class='btn btn-primary' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'>Status</button></div></td><td id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-secondary' style='margin-left: 20%'><span class='glyphicon glyphicon-trash'></span></button>" + "</td></tr>";
+                            "</td><td id='delaytime' ><button class='btn btn-primary sharp animated flipInY' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'>Status</button></div></td><td id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-primary sharp animated flipInY' style='margin-left: 20%'><span class='glyphicon glyphicon-trash'></span></button>" + "</td></tr>";
 
 
                     }catch(error){
