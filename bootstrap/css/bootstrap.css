@@ -1103,7 +1103,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #402c64;
   text-decoration: none;
 }
 a:hover,
@@ -5895,6 +5895,8 @@ button.close {
   transition: transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
+  padding: 0;
+  margin:2% -1% 0% 2%;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
