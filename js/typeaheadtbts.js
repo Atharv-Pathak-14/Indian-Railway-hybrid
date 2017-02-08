@@ -16,7 +16,7 @@ typeof $.typeahead === 'function' && $.typeahead({
     correlativeTemplate:true,
     cache: true,
     template: '<span>' +
-    '<span class="division"><button style="background:rgba(98,246,140,1)">{{code}}</button> | {{name}}</span>' +
+    '<span class="division"><button style="background:rgba(66,44,100,0.60);color:white">{{code}}</button> | {{name}}</span>' +
     '</span>',
     source:stationdata,
     callback: {
@@ -42,7 +42,7 @@ typeof $.typeahead === 'function' && $.typeahead({
     correlativeTemplate:true,
     cache: true,
     template: '<span>' +
-    '<span class="division"><button style="background:rgba(255,193,26,0.52)">{{code}}</button> | {{name}}</span>' +
+    '<span class="division"><button style="background:rgba(66,44,100,0.60);color:white">{{code}}</button> | {{name}}</span>' +
     '</span>',
     source:stationdata,
     callback: {
