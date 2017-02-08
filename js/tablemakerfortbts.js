@@ -15,7 +15,7 @@ function tablemakertbts(body) {
                     weekdata+="<day style='color:navy;margin-left: 7px'>"+weeklist[k]+"</day>";
                 } else if((train.days[k].runs=="N")){
 
-                    weekdata+="<day style='color:red;margin-left:7px'>"+weeklist[k]+"</day>";
+                    weekdata+="<day style='color:rgba(135,27,27,.92);margin-left:7px'>"+weeklist[k]+"</day>";
                 }
             }
                 weekdata+="</h7>";
