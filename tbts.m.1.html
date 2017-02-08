@@ -42,7 +42,9 @@
 
         font-family: 'hello';
         }
-
+body{
+	background-color:rgb(244,244,244);
+}
         .spinner {
             margin-top: 12px;
             height: 10em;
@@ -229,11 +231,7 @@
         text-align:center;
       }*/
       /*dustbin*/
-      .trash{
 
-        padding:15px 10px 15px 0px;
-        margin:0px 0px 0px 0px;
-      }
       /*history table*/
       .hist{
         position:absolute;
@@ -241,13 +239,8 @@
           padding:9px 0px 0px 8px;
           margin:0px 0px 0px 0px;
       }
-      .main_history_table{
-        -webkit-shadow-box:0 10px 6px -6px #fff;
-      }
-      #table_row{
-        background-color: white;
 
-      }
+
       #table_data{
         border:0px solid  rgb(244,244,244);
         padding:10px 0px 10px 12px;
@@ -284,7 +277,7 @@
             padding:0px 0px 0px 0px;
         }
         .calendaricon{
-            padding:11px 6px 7px 6px;
+            padding:11px 6px 9px 6px;
             margin:-1px 0px 0px 0px;
         }
         .glyphicon-heart-empty{
@@ -344,6 +337,7 @@
 </script>
 
 <body onload="doOnLoad();" data-spy="scroll" data-target=".navbar" data-offset="">
+
     <div class="train_bw_2_station animated">
         <!--top logo bar-->
         <nav class="container-fluid navbar-fixed-top ">
@@ -372,7 +366,7 @@
                 <div class="btn-group today_button animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
                     <button type="button" class="btn btn-primary sharp today active ">Today</button>
                     <button type="button" class="btn btn-primary sharp tomorrow">Tomorrow</button>
-                    <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon"><span style="color:rgb(64,44,100)" class=""></span></button>
+                    <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon"></button>
                 </div>
             </div>
 
@@ -437,26 +431,27 @@
       <div  class="status" style="-webkit-box-shadow: 0 10px 6px -6px #777">
           <p id="success"></p>
       </div>
+
         <div class="table-responsive responsive_table">
             <div class="table"></div>
         </div>
     </div>
 
     <!-- Modal -->
-    <div class="container-fluid modal fade" id="myModal" role="dialog">
-        <div class="container-fluid modal-dialog">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
             <!-- Modal content-->
-            <div class="container-fluid modal-content">
-                <div class="container-fluid modal-header">
+            <div class="modal-content">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title"><p id="trainname"></p><p id="currentposition"></p></h4>
                 </div>
-                <div class="container-fluid modal-body">
+                <div class="modal-body">
                     <p class="tabledata"> </p>
 
                 </div>
-                <div class="container-fluid modal-footer">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>

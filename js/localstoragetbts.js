@@ -33,7 +33,7 @@ function storinglocallytbts(srcdst) {
 function loadhistorytbts(){
 
 
-    var itemdisplay="<table class=\"table table-condensed centered main_history_table\"><thead><h4 class='search glyphicon glyphicon-trash trash' onclick=\"clear_cache()\" style='float:right'>";
+    var itemdisplay="<section class=\"table\" style='background-color:rgb(244,244,244)'><section class='row'><h3 class='search glyphicon glyphicon-trash  col-xs-12' onclick=\"clear_cache()\" align='right' ></h3></section></section>";
 
     var fetchdata=JSON.parse(localStorage.getItem("mydatatbts"));
     try {
@@ -52,7 +52,7 @@ console.log("else part of loadhsitory is running");
                     count++;
                     try {
 
-                       itemdisplay += "<tr id='table_row' ><td style='background-color:rgb(244,244,244)' id='table_data' ><a href='#' id='data_hist' onclick='historyonclick(" + JSON.stringify(fetchdata[k].sourcedetails)+ "," + JSON.stringify(fetchdata[k].destinationdatails) +")' >" + fetchdata[k].sourcedetails.name + "<section align='center' style='position:absolute;margin:-25px 0% 0% 31%'><img src='img/arrow.png'  height='30px' width='90px'></section>"+"<spam style='float:right;margin:0px 15px 0px 0px;'>"+ fetchdata[k].destinationdatails.name +"</spam>"+ "</a></td></tr>";
+                       itemdisplay += "<section style='background-color:white;'><section style='background-color:rgb(244,244,244)' id='table_data' ><a class='row' href='#' id='data_hist' onclick='historyonclick(" + JSON.stringify(fetchdata[k].sourcedetails)+ "," + JSON.stringify(fetchdata[k].destinationdatails) +")' ><section class='col-xs-4' align='right'>" + fetchdata[k].sourcedetails.name + "</section><section class='col-xs-4' align='center'><img src='img/arrow.png' height='21px' width='70px'></section>"+"<section class='col-xs-4' align='left'>"+ fetchdata[k].destinationdatails.name +"</section>"+ "</a></section></section>";
                     }catch(error){
                         console.log("here is the bug inside itemdisplay means:"+error);
                     }
