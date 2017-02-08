@@ -35,7 +35,7 @@ $(document).ready(function() {
         for_today_or_tommorow=0;
         year = d.getFullYear();
         daydiscription = "Today(" + date + " " + monthname + ")";
-        console.log("today clicked :" + date + "-" + month + "-" + year);
+        //console.log("today clicked :" + date + "-" + month + "-" + year);
  submitform();
     });
     $(".tomorrow").click(function() {
@@ -55,13 +55,13 @@ $(document).ready(function() {
         }
         year = d.getFullYear();
 
-        console.log("tomorrow clicked:" + date + "-" + month + "-" + year);
+        //console.log("tomorrow clicked:" + date + "-" + month + "-" + year);
         daydiscription = "Tomorrow (" + date + " " + monthname + ")";
         submitform();
     });
     $(".calendaricon").click(function() {
         $(this).addClass('active').siblings().removeClass('active');
-        console.log("calender clicked");
+        //console.log("calender clicked");
     });
 
 });

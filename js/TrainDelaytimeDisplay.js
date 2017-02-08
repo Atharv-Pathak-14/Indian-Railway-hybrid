@@ -5,11 +5,11 @@ function traindelaytimedisplay(body,train_no) {
 
     body.route.forEach(function(route) {
         if (route.station_.code == sourcedetails.code) {
-            console.log("found the source station data for the train!!!");
+            //console.log("found the source station data for the train!!!");
 
             departuretime = route.actdep;
             delaytime = route.latemin;
-            console.log("->" + departuretime + " Delay:" + delaytime);
+            //console.log("->" + departuretime + " Delay:" + delaytime);
         }
 
 

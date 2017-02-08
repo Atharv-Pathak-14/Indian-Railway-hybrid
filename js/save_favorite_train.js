@@ -2,7 +2,7 @@
  * Created by sahu on 1/30/2017.
  */
 function savefav(traindetails){
-    console.log(traindetails);
+    //console.log(traindetails);
 
 
     var id="."+traindetails.number;
@@ -12,7 +12,7 @@ function savefav(traindetails){
     }else  if($(id).find("#favicon").hasClass('glyphicon glyphicon-heart')){
         $(id).find("#favicon").removeClass('glyphicon glyphicon-heart').addClass('glyphicon glyphicon-heart-empty');
         dlt_favitem(traindetails);
-        console.log('else part working!!!');
+        //console.log('else part working!!!');
     }
-    console.log("yeh it worked baby!!!!!!!!!");
+    //console.log("yeh it worked baby!!!!!!!!!");
 }

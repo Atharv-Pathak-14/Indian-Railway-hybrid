@@ -234,7 +234,7 @@
             <img src="img\saral.png" width="36px" height="36px" style="border:0px solid white;border-radius:5px;" class="icon">&nbsp;&nbsp;&nbsp;INDIAN RAILWAYS
         </li>
         <li class="col-xs-3" style="font-size:17px">
-            <a href="tbts.m.1.html" style="color:white;font-family:'hello';">SEARCH</a>
+            <a href="index.html" style="color:white;font-family:'hello';">SEARCH</a>
         </li>
         <li class="col-xs-3" style="font-size:17px">
             <a href="stationstatus.html" style="color:white;font-family:'hello'" class="under">STATUS</a>
@@ -336,8 +336,8 @@
             onClickAfter: function(node, a, item, event) {
 
                   sourcedetails = item;
-                console.log(sourcedetails.code);
-                console.log(sourcedetails);
+                //console.log(sourcedetails.code);
+                //console.log(sourcedetails);
                 request_live_station_status(sourcedetails,within_hours);
                 $("#src").blur();
                 //request_live_station_status(sourcedetails,within_hours);
@@ -369,17 +369,17 @@ function request_live_station_status(sourcedetails,withinhours) {
     $(".status").html("");
     $(".table").html("");
     $(".table").addClass("spinner spinn");
-    console.log(sourcedetails.code);
+    //console.log(sourcedetails.code);
     station=sourcedetails.code;
-    console.log(station);
+    //console.log(station);
     var erroroccured=false;
  storinglocallyStnSts(sourcedetails);
     livestationstatus(station,withinhours).then(function (body) {
-        console.log(body);
+        //console.log(body);
         $(".table").removeClass("spinner spinn");
         return table_for_live_station_status(body);
     },function (error) {
-        console.log(error);
+        //console.log(error);
         $(".table").removeClass("spinner spinn");
         erroroccured=true;
         $( ".status" ).append( error );
@@ -393,40 +393,40 @@ function request_live_station_status(sourcedetails,withinhours) {
             $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');
         });
     },function (error) {
-        console.log(error);
+        //console.log(error);
         $(".table").removeClass("spinner spinn");
         $( ".status" ).append( "<li>problem :" + error + "</li>" );
     }).catch(function (error) {
-        console.log(error);
+        //console.log(error);
         $( ".status" ).append( "<li>problem :" + error + "</li>" );
     });
 }
 $(document).ready(function () {
 loadhistoryStnSts();
     $("#2hours").click(function() {
-        console.log("hii baby !!! its 2");
+        //console.log("hii baby !!! its 2");
         within_hours=2;
         if($("#src").val()!=="" && sourcedetails){
-            console.log("if matched");
-             console.log($("#src").val());
+            //console.log("if matched");
+             //console.log($("#src").val());
             request_live_station_status(sourcedetails,within_hours);
         }else{
-            console.log("else matched");
-            console.log($("#src").val());
+            //console.log("else matched");
+            //console.log($("#src").val());
         }
 
     });
     $("#4hours").click(function() {
-        console.log("hii baby!!! its 4");
+        //console.log("hii baby!!! its 4");
         within_hours=4;
 
         if($("#src").val()!=="" && sourcedetails){
-            console.log("if matched");
-            console.log($("#src").val());
+            //console.log("if matched");
+            //console.log($("#src").val());
             request_live_station_status(sourcedetails,within_hours);
         }else{
-            console.log("else matched");
-            console.log($("#src").val());
+            //console.log("else matched");
+            //console.log($("#src").val());
         }
 
     });

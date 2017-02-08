@@ -37,9 +37,9 @@ function mydate_array_maker() {
             d_fulldate = weekday[ad[k].getDay()]+","+m_date + " " + monthNames[m_month-1] + " " + 17;
             mydate_array[k] = {"day": ad[k].getDay(), "D_date": d_fulldate, "V_date": v_fulldate};
         }
-     //   console.log(mydate_array);
-       // console.log(JSON.stringify(mydate_array));
-        console.log("my dates for check created!!!!");
+     //   //console.log(mydate_array);
+       // //console.log(JSON.stringify(mydate_array));
+        //console.log("my dates for check created!!!!");
         resolve(mydate_array);
     });
 }

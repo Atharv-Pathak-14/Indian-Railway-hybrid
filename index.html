@@ -22,7 +22,7 @@
     <script src="js/tablemakerfortbts.js"></script>
     <script src="js/typeaheadtbts.js"></script>
     <script src="js/ajax_success_error.js"></script>
-    <link rel="stylesheet" type="text/css" href="codebase/fonts/font_roboto/roboto.css" />
+
     <link rel="stylesheet" type="text/css" href="codebase/dhtmlxcalendar.css" />
     <script src="codebase/dhtmlxcalendar.js"></script>
     <script src="js/today.tomorrow.calender.buttons.js"></script>
@@ -42,7 +42,9 @@
 
         font-family: 'hello';
         }
-
+body{
+	background-color:rgb(244,244,244);
+}
         .spinner {
             margin-top: 12px;
             height: 10em;
@@ -220,13 +222,16 @@
         text-align:center;
       }
 
-
+    /*  .label-warning
+      {
+        color:white;
+        margin:10px;
+        font-size:20px ;
+        font-weight:lighter;
+        text-align:center;
+      }*/
       /*dustbin*/
-      .trash{
 
-        padding:15px 10px 15px 0px;
-        margin:0px 0px 0px 0px;
-      }
       /*history table*/
       .hist{
         position:absolute;
@@ -234,13 +239,8 @@
           padding:9px 0px 0px 8px;
           margin:0px 0px 0px 0px;
       }
-      .main_history_table{
-        -webkit-shadow-box:0 10px 6px -6px #fff;
-      }
-      #table_row{
-        background-color: white;
 
-      }
+
       #table_data{
         border:0px solid  rgb(244,244,244);
         padding:10px 0px 10px 12px;
@@ -277,12 +277,16 @@
             padding:0px 0px 0px 0px;
         }
         .calendaricon{
-            padding:5px 4px 5px 7px;
-            margin:6% 0px 0px 2%;
+            padding:11px 6px 9px 6px;
+            margin:-1px 0px 0px 0px;
         }
-        .glyphicon-heart-empty,.glyphicon-heart{
+        .glyphicon-heart-empty{
             color:rgb(66,44,100);
-            font-size: 20px;
+
+        }
+          .glyphicon-heart{
+            color:rgb(66,44,100);
+
         }
         .under{
             border-bottom: 2px solid white;
@@ -290,12 +294,13 @@
         a:hover,a:active,a:visited{
           text-decoration: none;
         }
-        .table-striped{
-          -webkit-box-shadow: 0 10px 6px -6px #777;
+        .success{
+          background-color:rgba(43,193,25,.20);
         }
-        .no{
-          display:none;
-        }
+        .icon{
+          padding:0px 0px 0px 0px;
+          margin:0px 0px 0px -30px;
+         }
     </style>
 
 </head>
@@ -310,11 +315,11 @@
         setFrom();
         myCalendar.attachEvent("onClick", function() {
             $(".date_here").html(myCalendar.getFormatedDate((' %d %M %y')));
-            //console.log(myCalendar.getFormatedDate('%d'+"-"+'%m'));
+            ////console.log(myCalendar.getFormatedDate('%d'+"-"+'%m'));
             date = myCalendar.getFormatedDate('%d');
             month = myCalendar.getFormatedDate('%m');
             daydiscription = myCalendar.getFormatedDate(' %d %M');
-            console.log("calender set :" + date + "-" + month + "-" + year);
+            //console.log("calender set :" + date + "-" + month + "-" + year);
             submitform();
         });
 
@@ -332,35 +337,35 @@
         }
         year = d.getFullYear();
         var disablecalenderpart = year + "-" + (month) + "-" + (date);
-        console.log("todays date is :" + disablecalenderpart);
+        //console.log("todays date is :" + disablecalenderpart);
         myCalendar.setSensitiveRange(disablecalenderpart, null);
 
     }
 </script>
 
 <body onload="doOnLoad();" data-spy="scroll" data-target=".navbar" data-offset="">
-    <div class="train_bw_2_station">
+
+    <div class="train_bw_2_station animated">
         <!--top logo bar-->
         <nav class="container-fluid navbar-fixed-top ">
             <ul class="ul row">
                 <li class="col-xs-12 title" style="font-size:25px">
-                    TRAIN
+                  <img src="img/saral.png" width="36px" height="36px" style="border:0px solid white;border-radius:5px;" class="icon">&nbsp;&nbsp;&nbsp;INDIAN RAILWAYS
                 </li>
-                <li class="col-xs-3" style="font-size:16.5px">
-                    <a href="tbts.m.1.html" style="color:white;font-family:'hello';" class="under">SEARCH</a>
+                <li class="col-xs-3" style="font-size:17px">
+                    <a href="index.html" style="color:white;font-family:'hello';" class="under">SEARCH</a>
                 </li>
-                <li class="col-xs-3" style="font-size:16.5px">
+                <li class="col-xs-3" style="font-size:17px">
                     <a href="stationstatus.html" style="color:white;font-family:'hello'">STATUS</a>
                 </li>
-                <li class="col-xs-3" style="font-size:16.5px">
+                <li class="col-xs-3" style="font-size:17px">
                     <a href="train_route.html" style="color:white;font-family:'hello';text-align:center;">ROUTE</a>
                 </li>
-                <li class="col-xs-3" style="font-size:16.5px">
-                    <a href="myfavpage.html"  style="color:white;" class='glyphicon glyphicon-heart-empty' ></a>
+                <li class="col-xs-3" style="font-size:17px">
+                    <a href="myfavpage.html"  style="color:white;" class="glyphicon glyphicon-heart-empty" ></a>
                 </li>
             </ul>
-        </nav>
-        <br>
+        </nav><br>
         <!--today,tomorrow-->
         <nav class="navbar navbar-default  today_tomorrow" align="center">
 
@@ -368,8 +373,8 @@
                 <div class="btn-group today_button animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
                     <button type="button" class="btn btn-primary sharp today active ">Today</button>
                     <button type="button" class="btn btn-primary sharp tomorrow">Tomorrow</button>
+                    <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon"></button>
                 </div>
-                <button type="button" class="btn btn-primary sharp date_here calendaricon glyphicon glyphicon-calendar" id="calendar_icon" style='border-radius:40px;float:right;position:absolute'><span style="color:rgb(64,44,100)"></span></button>
             </div>
 
             <div class="container-fluid search_box animated flipInX" style="-webkit-box-shadow: 0 10px 6px -6px #777">
@@ -433,26 +438,27 @@
       <div  class="status" style="-webkit-box-shadow: 0 10px 6px -6px #777">
           <p id="success"></p>
       </div>
+
         <div class="table-responsive responsive_table">
             <div class="table"></div>
         </div>
     </div>
 
     <!-- Modal -->
-    <div class="container-fluid modal fade" id="myModal" role="dialog">
-        <div class="container-fluid modal-dialog">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
             <!-- Modal content-->
-            <div class="container-fluid modal-content">
-                <div class="container-fluid modal-header">
+            <div class="modal-content">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title"><p id="trainname"></p><p id="currentposition"></p></h4>
                 </div>
-                <div class="container-fluid modal-body">
+                <div class="modal-body">
                     <p class="tabledata"> </p>
 
                 </div>
-                <div class="container-fluid modal-footer">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -477,7 +483,7 @@
     $(document).ready(function(k) {
         loadhistorytbts();
         $("#src").focus();
-        console.log('fetching local storage!!1');
+        //console.log('fetching local storage!!1');
 
     });
 
@@ -504,7 +510,7 @@
         } else if ($("#dst").val()== "") {
             $("#dst").focus();
         } else {
-            console.log("unknown fuction under submit button!!!");
+            //console.log("unknown fuction under submit button!!!");
             $("#src").focus();
         }
     }
@@ -513,7 +519,7 @@
     function requesttbts(sourcedetails, destinationdetails) {
 var notgetting_data=false;
         tbts(sourcedetails.code, destinationdetails.code, date, month).then(function(body) {
-            console.log(body);
+            //console.log(body);
             favorite_train_list_creator();
             $(".table").removeClass("spinner spinn");
             return tablemakertbts(body);
@@ -521,7 +527,7 @@ var notgetting_data=false;
             $(".table").removeClass("spinner spinn");
             notgetting_data=true;
             $(".status").html("Problem:"+error );
-            console.log("problem :" + error);
+            //console.log("problem :" + error);
 
         }).then(function(table) {
             if(notgetting_data==false) {
@@ -538,10 +544,10 @@ var notgetting_data=false;
         },function (error) {
             $(".table").removeClass("spinner spinn");
             $(".status").html("Problem:"+error );
-            console.log("problem :" + error);
+            //console.log("problem :" + error);
         }).catch(function(error) {
             $(".table").removeClass("spinner spinn");
-            console.log("errror caught!!! :" + error);
+            //console.log("errror caught!!! :" + error);
             $(".status").append("<li>problem : " + error + "</li>");
         });
 
@@ -555,7 +561,7 @@ var notgetting_data=false;
 
         $(".table").find(id).find("#delaytime").html("<span><img src=\"img/hourglass.svg\" style=\"height: 35px\"></span>");
         trainroute(train_no).then(function(body) {
-            console.log(body);
+            //console.log(body);
             return trainstartday(body, sourcedetails, for_today_or_tommorow);
         }, function(error) {
             $('.status').html("<li>problem :" + error + "</li>");
@@ -563,7 +569,7 @@ var notgetting_data=false;
             $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
 
         }).then(function(tsfulldate) {
-            console.log("this is ur train start date :" + tsfulldate);
+            //console.log("this is ur train start date :" + tsfulldate);
 
             return livetrainstatus(train_no, tsfulldate);
         }, function(error) {
@@ -576,7 +582,7 @@ var notgetting_data=false;
             $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
 
         }).catch(function(error) {
-            console.log("errror caught!!! :" + error);
+            //console.log("errror caught!!! :" + error);
             $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
             $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
 
@@ -589,10 +595,10 @@ var notgetting_data=false;
 
         var menu = $('.table');
         var origOffsetY = menu.offset().top;
-        console.log("this is offset" + origOffsetY);
+        //console.log("this is offset" + origOffsetY);
 
         function scroll() {
-            console.log("scroll function on work!!!");
+            //console.log("scroll function on work!!!");
             if ($(window).scrollTop() > origOffsetY) {
                 // $('.navbar-static-top').addClass('sticky');
                 $('.table').addClass('menu-padding');

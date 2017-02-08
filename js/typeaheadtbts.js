@@ -24,7 +24,7 @@ typeof $.typeahead === 'function' && $.typeahead({
 
             sourcedetails = item;
             submitform();
-            console.log(sourcedetails);
+            //console.log(sourcedetails);
 
         }
     },
@@ -50,7 +50,7 @@ typeof $.typeahead === 'function' && $.typeahead({
 
             destinationdatails = item;
 
-            console.log(destinationdatails);
+            //console.log(destinationdatails);
             submitform();
 
 

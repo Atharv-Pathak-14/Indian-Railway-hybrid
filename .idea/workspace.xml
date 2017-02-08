@@ -18,59 +18,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tbts.m.1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tbts.m.1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="576" column="0" lean-forward="true" selection-start-line="576" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
-              <folding>
-                <element signature="e#2784#2837#0" expanded="false" />
-                <element signature="e#6045#6218#0" expanded="false" />
-                <marker date="1486382605139" expanded="true" signature="18038:18050" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="18509:18527" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="18968:18986" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="19348:19366" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="19699:19717" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-              <folding>
-                <marker date="1486382605139" expanded="true" signature="18038:18050" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="18509:18527" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="18968:18986" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="19348:19366" ph="..." />
-                <marker date="1486382605139" expanded="true" signature="19699:19717" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stationstatus.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stationstatus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="283" column="51" lean-forward="true" selection-start-line="283" selection-start-column="51" selection-end-line="283" selection-end-column="51" />
-              <folding>
-                <marker date="1486382605135" expanded="true" signature="10126:10158" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tbts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/tbts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+            <state relative-caret-position="85">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc;n#tbts#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="today.tomorrow.calender.buttons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stationstatus.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stationstatus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="338" column="16" lean-forward="false" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
+              <folding>
+                <marker date="1486581071935" expanded="true" signature="10512:10555" ph="..." />
               </folding>
             </state>
           </provider>
@@ -79,46 +55,42 @@
       <file leaf-file-name="trainroute.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/trainroute.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myfavpage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myfavpage.html">
+      <file leaf-file-name="trainstartday.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/trainstartday.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+            <state relative-caret-position="86">
+              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typeaheadtbts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/typeaheadtbts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#0#43#0" expanded="false" />
+                <marker date="1486581071809" expanded="true" signature="444:487" ph="..." />
+                <marker date="1486581071809" expanded="true" signature="1130:1173" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_route.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train_route.html">
+      <file leaf-file-name="upcoming_trains_functions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/upcoming_trains_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3298">
-              <caret line="194" column="9" lean-forward="false" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
-              <folding>
-                <marker date="1486382605146" expanded="true" signature="12215:12243" ph="..." />
-                <marker date="1486382605146" expanded="true" signature="12370:12395" ph="..." />
-                <marker date="1486382605146" expanded="true" signature="12650:12661" ph="..." />
-                <marker date="1486382605146" expanded="true" signature="14212:14227" ph="..." />
-                <marker date="1486382605146" expanded="true" signature="14212:14245" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax_success_error.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ajax_success_error.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="86">
+              <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -127,11 +99,31 @@
       <file leaf-file-name="save_favorite_train.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/save_favorite_train.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="116" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="116" />
+            <state relative-caret-position="122">
+              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="n#!!doc;n#savefav#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="localstoragetbts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/localstoragetbts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mydates_maker_for_livetrain.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mydates_maker_for_livetrain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,12 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
-      <find>find('#errormsg')</find>
-      <find>gettrain</find>
-      <find>.svg</find>
-      <find>--</find>
-      <find>#statusbutton&quot;</find>
       <find>fav</find>
       <find>arrow.png</find>
       <find>font.</find>
@@ -179,14 +165,24 @@
       <find>gly</find>
       <find>t</find>
       <find>navy</find>
+      <find>red</find>
+      <find>#ef5350</find>
+      <find>#d</find>
+      <find>tbts.m.1.html</find>
+      <find>saral</find>
+      <find>console.log(</find>
     </findStrings>
     <replaceStrings>
       <replace>fetchdata[k].number</replace>
       <replace>sourcedetails</replace>
       <replace>mydata_route</replace>
+      <replace>index.html</replace>
+      <replace>#3399cc</replace>
+      <replace>//console.log(</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\sahu\Desktop\train2\js</dir>
+      <dir>C:\Users\sahu\Desktop\last</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -201,41 +197,44 @@
         <option value="$PROJECT_DIR$/js/apikey.js" />
         <option value="$PROJECT_DIR$/js/typeaheadstbts.js" />
         <option value="$PROJECT_DIR$/tbts.2.2.html" />
-        <option value="$PROJECT_DIR$/js/inputswap.js" />
         <option value="$PROJECT_DIR$/js/dakepicker.js" />
         <option value="$PROJECT_DIR$/css/loading_spinner.css" />
         <option value="$PROJECT_DIR$/spineer.html" />
         <option value="E:/desktop.29.01.17/train2.0/trainfunctionsmerging/livestationstatus.html" />
         <option value="$PROJECT_DIR$/index2.html" />
-        <option value="$PROJECT_DIR$/livestationstatus.html" />
         <option value="$PROJECT_DIR$/date_trial.html" />
         <option value="$PROJECT_DIR$/date_practice.html" />
-        <option value="$PROJECT_DIR$/js/trainstartday.js" />
         <option value="$PROJECT_DIR$/rough_work.html" />
-        <option value="$PROJECT_DIR$/js/GetLiveStatusOnClick.js" />
-        <option value="$PROJECT_DIR$/js/localstorage_stationStatus.js" />
-        <option value="$PROJECT_DIR$/js/localstorage_trainroute.js" />
-        <option value="$PROJECT_DIR$/js/TrainDelaytimeDisplay.js" />
-        <option value="$PROJECT_DIR$/js/favoritestorage.js" />
-        <option value="$PROJECT_DIR$/js/localstoragetbts.js" />
-        <option value="$PROJECT_DIR$/js/mydates_maker_for_livetrain.js" />
         <option value="$PROJECT_DIR$/keyboard_hide.html" />
         <option value="$PROJECT_DIR$/font.css" />
         <option value="$PROJECT_DIR$/js/tablemakerfor_livetrainstatus.js" />
-        <option value="$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js" />
         <option value="$PROJECT_DIR$/train_route.html" />
         <option value="$PROJECT_DIR$/js/tablemakerfortbts.js" />
         <option value="$PROJECT_DIR$/myfavpage.html" />
-        <option value="$PROJECT_DIR$/js/typeaheadtbts.js" />
-        <option value="$PROJECT_DIR$/js/livetrainstatus.js" />
-        <option value="$PROJECT_DIR$/js/livestationstatus.js" />
-        <option value="$PROJECT_DIR$/js/tbts.js" />
-        <option value="$PROJECT_DIR$/js/trainroute.js" />
-        <option value="$PROJECT_DIR$/js/ajax_success_error.js" />
         <option value="$PROJECT_DIR$/index5" />
-        <option value="$PROJECT_DIR$/js/save_favorite_train.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/livestationstatus.html" />
         <option value="$PROJECT_DIR$/tbts.m.1.html" />
+        <option value="$PROJECT_DIR$/codebase/dhtmlxcalendar.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/GetLiveStatusOnClick.js" />
+        <option value="$PROJECT_DIR$/js/TrainDelaytimeDisplay.js" />
+        <option value="$PROJECT_DIR$/js/ajax_success_error.js" />
+        <option value="$PROJECT_DIR$/js/favoritestorage.js" />
+        <option value="$PROJECT_DIR$/js/inputswap.js" />
+        <option value="$PROJECT_DIR$/js/livestationstatus.js" />
+        <option value="$PROJECT_DIR$/js/livetrainstatus.js" />
+        <option value="$PROJECT_DIR$/js/localstorage_stationStatus.js" />
+        <option value="$PROJECT_DIR$/js/localstorage_trainroute.js" />
+        <option value="$PROJECT_DIR$/js/localstoragetbts.js" />
+        <option value="$PROJECT_DIR$/js/mydates_maker_for_livetrain.js" />
+        <option value="$PROJECT_DIR$/js/save_favorite_train.js" />
+        <option value="$PROJECT_DIR$/js/tbts.js" />
+        <option value="$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js" />
+        <option value="$PROJECT_DIR$/js/trainroute.js" />
+        <option value="$PROJECT_DIR$/js/trainstartday.js" />
+        <option value="$PROJECT_DIR$/js/typeaheadtbts.js" />
+        <option value="$PROJECT_DIR$/js/upcoming_trains_functions.js" />
         <option value="$PROJECT_DIR$/stationstatus.html" />
       </list>
     </option>
@@ -283,7 +282,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -306,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="typeahead" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,9 +322,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="last" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="last" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codebase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,15 +356,15 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kamlesh\WebstormProjects\tmakingmodular\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sahu\Desktop\last" />
       <recent name="C:\Users\sahu\Desktop\last\img" />
       <recent name="C:\Users\sahu\Desktop\train3" />
       <recent name="C:\Users\sahu\Desktop\train3\img" />
       <recent name="C:\Users\sahu\Desktop\train2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamlesh\WebstormProjects\tmakingmodular\js" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.tbts.m.1.html">
@@ -477,19 +490,21 @@
       <workItem from="1486279490791" duration="15270000" />
       <workItem from="1486303669761" duration="5475000" />
       <workItem from="1486382442034" duration="1419000" />
+      <workItem from="1486573570866" duration="6081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248213000" />
+    <option name="totallyTimeSpent" value="254294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5534591" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03548387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -500,7 +515,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.103225805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38522014" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -518,130 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/traindata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/date_trial.html" />
-    <entry file="file://E:/desktop.29.01.17/triandata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/date_practice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/desktop.29.01.17/old files train/trainroute.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="142" column="7" lean-forward="true" selection-start-line="142" selection-start-column="7" selection-end-line="142" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/localstorage_stationStatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/localstorage_trainroute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TrainDelaytimeDisplay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="100" lean-forward="false" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
-          <folding>
-            <element signature="n#!!doc;n#traindelaytimedisplay#0" expanded="false" />
-            <marker date="1486134531525" expanded="true" signature="564:574" ph="..." />
-            <marker date="1486134531525" expanded="true" signature="680:690" ph="..." />
-            <marker date="1486134531525" expanded="true" signature="811:822" ph="..." />
-            <marker date="1486134531525" expanded="true" signature="923:934" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/desktop.29.01.17/train-project/train2.0/trainfunctionsmerging/keypack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/apikey.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/loading.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/longarrow.png" />
-    <entry file="file://$PROJECT_DIR$/img/arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/trainstartday.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#trainstartday#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/localstoragetbts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding>
-            <marker date="1486214304411" expanded="true" signature="1270:1281" ph="..." />
-            <marker date="1486214304411" expanded="true" signature="1857:1890" ph="..." />
-            <marker date="1486214304411" expanded="true" signature="2138:2178" ph="..." />
-            <marker date="1486214304411" expanded="true" signature="2259:2295" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mydates_maker_for_livetrain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="101" lean-forward="true" selection-start-line="36" selection-start-column="101" selection-end-line="36" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/favoritestorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1668">
-          <caret line="133" column="114" lean-forward="false" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index2.html" />
-    <entry file="file://$PROJECT_DIR$/spineer.html" />
     <entry file="file://E:/desktop.29.01.17/old files train/livetrain.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
@@ -650,38 +540,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/keyboard_hide.html" />
-    <entry file="file://$PROJECT_DIR$/livestationstatus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/GetLiveStatusOnClick.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/humans.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/upcoming_trains_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1485712470371" expanded="true" signature="1448:1458" ph="..." />
-            <marker date="1485712470371" expanded="true" signature="1559:1569" ph="..." />
-            <marker date="1485712470371" expanded="true" signature="1692:1702" ph="..." />
-            <marker date="1485712470371" expanded="true" signature="1803:1814" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,14 +600,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/dakepicker.js" />
-    <entry file="file://$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/tablemakerfortbts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -755,98 +609,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/dustbin3.png" />
-    <entry file="file://$PROJECT_DIR$/js/typeaheadtbts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-            <marker date="1486303764060" expanded="true" signature="444:473" ph="..." />
-            <marker date="1486303764060" expanded="true" signature="1114:1146" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/livetrainstatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="76" />
-          <folding>
-            <element signature="n#!!doc;n#livetrainstatus#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/livestationstatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="76" lean-forward="false" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/tbts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-          <folding>
-            <element signature="n#!!doc;n#tbts#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/trainroute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myfavpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/index5" />
+    <entry file="file://$PROJECT_DIR$/img/mainpageload.svg" />
     <entry file="file://$PROJECT_DIR$/train_route.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3298">
           <caret line="194" column="9" lean-forward="false" selection-start-line="194" selection-start-column="9" selection-end-line="194" selection-end-column="9" />
           <folding>
-            <marker date="1486382605146" expanded="true" signature="12215:12243" ph="..." />
-            <marker date="1486382605146" expanded="true" signature="12370:12395" ph="..." />
-            <marker date="1486382605146" expanded="true" signature="12650:12661" ph="..." />
-            <marker date="1486382605146" expanded="true" signature="14212:14227" ph="..." />
-            <marker date="1486382605146" expanded="true" signature="14212:14245" ph="..." />
+            <marker date="1486581071738" expanded="true" signature="10259:10302" ph="..." />
+            <marker date="1486581071738" expanded="true" signature="12621:12673" ph="..." />
+            <marker date="1486581071738" expanded="true" signature="12800:12840" ph="..." />
+            <marker date="1486581071738" expanded="true" signature="13098:13109" ph="..." />
+            <marker date="1486581071738" expanded="true" signature="14665:14726" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ajax_success_error.js">
+    <entry file="file://$PROJECT_DIR$/myfavpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index5" />
-    <entry file="file://$PROJECT_DIR$/js/save_favorite_train.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="116" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="116" />
+        <state relative-caret-position="550">
+          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
           <folding>
-            <element signature="n#!!doc;n#savefav#0" expanded="false" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/mainpageload.svg">
+    <entry file="file://$PROJECT_DIR$/bootstrap/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -854,42 +643,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stationstatus.html">
+    <entry file="file://$PROJECT_DIR$/date_practice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="283" column="51" lean-forward="true" selection-start-line="283" selection-start-column="51" selection-end-line="283" selection-end-column="51" />
-          <folding>
-            <marker date="1486382605135" expanded="true" signature="10126:10158" ph="..." />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/livestationstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/arrow.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/light.ttf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/fonts/font_awesome/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/calendar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codebase/dhtmlxcalendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="8" column="12374" lean-forward="false" selection-start-line="8" selection-start-column="12374" selection-end-line="8" selection-end-column="12381" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tbts.m.1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="576" column="0" lean-forward="true" selection-start-line="576" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#2784#2837#0" expanded="false" />
-            <element signature="e#6045#6218#0" expanded="false" />
-            <marker date="1486382605139" expanded="true" signature="18038:18050" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="18509:18527" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="18968:18986" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="19348:19366" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="19699:19717" ph="..." />
+            <marker date="1486581071872" expanded="true" signature="17953:17965" ph="..." />
+            <marker date="1486581071872" expanded="true" signature="18426:18444" ph="..." />
+            <marker date="1486581071872" expanded="true" signature="18887:18905" ph="..." />
+            <marker date="1486581071872" expanded="true" signature="19267:19285" ph="..." />
+            <marker date="1486581071872" expanded="true" signature="19620:19638" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typeahead/jquery.typeahead.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        <state relative-caret-position="77">
+          <caret line="600" column="12" lean-forward="false" selection-start-line="600" selection-start-column="12" selection-end-line="600" selection-end-column="12" />
           <folding>
-            <marker date="1486382605139" expanded="true" signature="18038:18050" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="18509:18527" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="18968:18986" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="19348:19366" ph="..." />
-            <marker date="1486382605139" expanded="true" signature="19699:19717" ph="..." />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1486581071768" expanded="true" signature="17953:17965" ph="..." />
+            <marker date="1486581071768" expanded="true" signature="18426:18444" ph="..." />
+            <marker date="1486581071768" expanded="true" signature="18887:18905" ph="..." />
+            <marker date="1486581071768" expanded="true" signature="19267:19285" ph="..." />
+            <marker date="1486581071768" expanded="true" signature="19620:19638" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/GetLiveStatusOnClick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TrainDelaytimeDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ajax_success_error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/favoritestorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="181" column="8" lean-forward="false" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/inputswap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/livestationstatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/livetrainstatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc;n#livetrainstatus#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/localstorage_stationStatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="90" column="4" lean-forward="false" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/localstorage_trainroute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/localstoragetbts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mydates_maker_for_livetrain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/save_favorite_train.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc;n#savefav#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tbts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc;n#tbts#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="63" column="8" lean-forward="false" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/trainroute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/trainstartday.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/typeaheadtbts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+            <marker date="1486581071809" expanded="true" signature="444:487" ph="..." />
+            <marker date="1486581071809" expanded="true" signature="1130:1173" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/upcoming_trains_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stationstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="338" column="16" lean-forward="false" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
+          <folding>
+            <marker date="1486581071935" expanded="true" signature="10512:10555" ph="..." />
           </folding>
         </state>
       </provider>

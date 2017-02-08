@@ -2,7 +2,7 @@
  * Created by kamlesh on 1/26/2017.
  */
 function trainstartday(body,sourcedetails,for_today_or_tommorow) {
-console.log("this is given date:"+date);
+//console.log("this is given date:"+date);
 
     return new Promise(function(resolve,reject)
     {
@@ -10,8 +10,8 @@ console.log("this is given date:"+date);
             if (route.code == sourcedetails.code) {
                 sourceno = route.no;
                 dayback = route.day - 1;
-                console.log("this is dayback:"+dayback);
-                console.log("here is the source no:" + route.no);
+                //console.log("this is dayback:"+dayback);
+                //console.log("here is the source no:" + route.no);
 
                 total_dayback=dayback+for_today_or_tommorow;
 
@@ -20,7 +20,7 @@ console.log("this is given date:"+date);
                 var tsmonth=d_tsd.getMonth()+1;
                 var tsyear=d_tsd.getFullYear();
                // var tsdate = Number(date) - dayback;
-                console.log("this is tsdate :"+tsdate);
+                //console.log("this is tsdate :"+tsdate);
                 if (tsdate < 10) {
                     tsdate = "0" + tsdate;
                 }
@@ -28,7 +28,7 @@ console.log("this is given date:"+date);
                     tsmonth = "0" + tsmonth;
                 }
                 var tsfulldate=tsyear+""+tsmonth+""+tsdate;
-                console.log("here is tsfulldate created :"+tsdate+"/"+tsmonth+"/"+tsyear);
+                //console.log("here is tsfulldate created :"+tsdate+"/"+tsmonth+"/"+tsyear);
                 resolve(tsfulldate);
             }
         });

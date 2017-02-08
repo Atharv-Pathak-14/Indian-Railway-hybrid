@@ -7,7 +7,7 @@ function livetrainstatus(train_no,fulldate) {
 
 
         var url = "http://api.railwayapi.com/live/train/" + train_no + "/doj/" + fulldate + "/apikey/" + key[keyno] + "/";
-        console.log("calling url :"+url);
+        //console.log("calling url :"+url);
         setTimeout(function(){reject("Server is not Responding!!!")}, 6000);
         $.get(url, function (body, status) {
 
@@ -18,7 +18,7 @@ function livetrainstatus(train_no,fulldate) {
                     reject(body.response_code+"<br class='status'>"+"Sorry!!! Not able to fetch required Data!!!");
                 }
                 else if(body.response_code==204){
-                    console.log(body);
+                    //console.log(body);
                     reject( body.response_code+"<br class='status'>Not able to fetch required Data!!!Please Try after some time!!");
                 }else{
                     reject("check ur response code .it is not 200!!!! :<br>Error :" + body.response_code);
