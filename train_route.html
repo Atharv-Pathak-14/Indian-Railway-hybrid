@@ -198,6 +198,14 @@
         a:hover,a:active,a:visited{
           text-decoration: none;
         }
+        .butt_hide{
+          background-color: rgb(66,44,100);
+        }
+        .butt_hide:active{
+        color:rgb(66,44,100);
+        background-color: white;
+        border:1px solid rgb(66,44,100);
+        }
     </style>
 
 
@@ -425,7 +433,7 @@ function button_maker_for_list(start_days_list){
     $(".table").append("<h4>Select Train Start Date:</h4><br>");
     start_days_list.forEach(function(s) {
 
-        $(".table").append("<button class='btn btn-primary sharp' style='margin-top: 5px;margin-left: 15px;color:white;font-size:15px;'  onclick='getlivestatusonclick_byDate("+JSON.stringify(train_details)+","+JSON.stringify(s.V_date)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" >"+s.D_date+"</button><br></div>");
+        $(".table").append("<button class='btn butt_hide' style='margin-top: 5px;margin-left: 15px;color:white;font-size:15px;'  onclick='getlivestatusonclick_byDate("+JSON.stringify(train_details)+","+JSON.stringify(s.V_date)+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" >"+s.D_date+"</button><br></div>");
 
 
     });

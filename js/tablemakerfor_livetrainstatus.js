@@ -21,7 +21,7 @@ function tablemakerforlivestatus(body,train_no,train_name) {
         }
         if (route.no < body.current_station.no) {
             if (route.latemin <= 0) {
-                livetabledata += "<tr class='success' id='" + route.no + "'><td>" + route.no + ".</td><td> " + route.station_.name + "</td><td>" + route.scharr +
+                livetabledata += "<tr class='success'  id='" + route.no + "'><td>" + route.no + ".</td><td> " + route.station_.name + "</td><td>" + route.scharr +
                     "<br><pp style=\"color:green\">" + route.actarr + " </pp></td><td>" + route.schdep + "<br><pp style=\"color:green\">" + route.actdep + "</pp></td><td><pp style=\"color:green\">" + route.latemin +
                     " min</pp></td></tr>";
             } else {
