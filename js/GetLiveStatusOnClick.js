@@ -31,7 +31,7 @@ retry_data=JSON.stringify(traindetails);
         return livetrainstatus(train_no,tsfulldate);
     },function (error) {
         $(".tabledata").removeClass("spinner spinn");
-        $(".tabledata").append( "<li>problem :" + error + "</li>" );
+        $(".tabledata").html( "<li>problem :" + error + "</li>" );
         $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
 
     }).then(function(body){
@@ -40,7 +40,7 @@ retry_data=JSON.stringify(traindetails);
         return tablemakerforlivestatus(body,train_no,train_name);
     },function (error) {
         $(".tabledata").removeClass("spinner spinn");
-        $(".tabledata").append( "<li>problem :" + error + "</li>" );
+        $(".tabledata").html( "<li>problem :" + error + "</li>" );
         $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
 
     }).catch(function (error) {

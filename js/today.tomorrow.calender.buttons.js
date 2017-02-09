@@ -60,6 +60,7 @@ $(document).ready(function() {
         submitform();
     });
     $(".calendaricon").click(function() {
+
         $(this).addClass('active').siblings().removeClass('active');
         //console.log("calender clicked");
     });

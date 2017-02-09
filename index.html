@@ -320,6 +320,7 @@ body{
             month = myCalendar.getFormatedDate('%m');
             daydiscription = myCalendar.getFormatedDate(' %d %M');
             //console.log("calender set :" + date + "-" + month + "-" + year);
+            for_today_or_tommorow=null;
             submitform();
         });
 
@@ -525,7 +526,7 @@ var notgetting_data=false;
             favorite_train_list_creator();
             $(".table").html("");
             $(".table").removeClass("spinner spinn");
-            return tablemakertbts(body);
+            return tablemakertbts(body,for_today_or_tommorow);
         }, function(error) {
             $(".table").removeClass("spinner spinn");
             notgetting_data=true;
@@ -537,8 +538,10 @@ var notgetting_data=false;
             if(notgetting_data==false) {
                 $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + "," + daydiscription);
                 $("#upcoming_trains").show();
+
             }
             $(".table").html(table);
+
             var intersection_fav = _.intersectionBy(all_train_list, all_fav_train_list, 'number');
             intersection_fav.forEach(function(train) {
                 var id = "." + train.number;
@@ -602,9 +605,77 @@ var notgetting_data=false;
         })
     }
 
+function get_train_route_onclick(train_details){
+        console.log(train_details);
+    founderror=false;
 
+    $("#trainname").html("");
+    $('#currentposition').html("");
+    $(".tabledata").html("");
+    $(".tabledata").addClass("spinner spinn");
+    trainroute(train_details.number).then(function (body) {
+        console.log(JSON.stringify(body));
+        return table_maker_for_train_route(body);
+    },function (error) {
+        console.log('error 1');
+        $(".tabledata").removeClass("spinner spinn");
+        $("#trainname").html( "<h3>"+error+"</h3>" );
+        $(".tabledata").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_route' onclick='retry_route("+JSON.stringify(train_details)+")'></button>");
+        founderror=true;
+        // console.log(error);
+    }).then(function (alldata) {
+        $(".tabledata").removeClass("spinner spinn");
+        if(founderror==false) {
+            $("#trainname").html("<h3>" + train_details.number + " | " + train_details.name + "" + "<br>" + alldata.weekdata + "</h3>");
+            $(".tabledata").html(alldata.tabledata);
+        }
 
+    }).catch(function (error) {
+        $("#trainname").html( "<h3>Error Requesting:"+train_details.name+"("+train_details.number+")"+"<br> :"+ error+"</h3>" );
+        // console.log(error);
+        console.log('error 2');
+    })
 
+}
+    function table_maker_for_train_route(body){
+        return new Promise(function (resolve,reject) {
+
+            var tabledata="<table class=\"table table-striped \"> <thead> <tr> <th>#</th><th>Station</th> <th>Arr.</th> <th>Dep.</th><th>Dist.</th></tr> </thead> </tbody>";
+
+            var weeklist=['M','Tu','W','Th','F','Sa','Su'];
+            var weekdata="<h7>";
+            for(var l=0;l<7;l++){
+                if(body.train.days[l].runs=="Y"){
+
+                    weekdata+="<day style='color:green;margin-left: 7px;font-size:17px;'>"+weeklist[l]+"</day>";
+                } else if(body.train.days[l].runs=="N"){
+
+                    weekdata+="<day style='color:red;margin-left:7px;font-size:17px'>"+weeklist[l]+"</day>";
+                }
+            }
+            //console.log(weekdata);
+            var k=1;
+
+            body.route.forEach(function (route){
+
+                if(k==route.day) {
+                    tabledata +="<tr><td></td><td style='color:navy;' ><h4><strong>Day "+route.day+"</strong></h4></td><td></td><td></td><td></td></tr>";
+                    k++;
+                }
+                {
+                    tabledata += "<tr><td>" + route.no + "</td><td> " + route.fullname + "</td><td>" + route.scharr + " </td><td>" + route.schdep + " </td><td>" + route.distance + " </td></tr>";
+                }
+            });
+
+            alldata={"tabledata":tabledata,"weekdata":weekdata};
+            resolve(alldata);
+
+        });
+
+    }
+  function retry_route(train_details) {
+      get_train_route_onclick(train_details);
+  }
 </script>
 
 </html>

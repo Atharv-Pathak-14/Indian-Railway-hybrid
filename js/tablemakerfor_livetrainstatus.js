@@ -11,6 +11,7 @@ function tablemakerforlivestatus(body,train_no,train_name) {
     } else {
         var trainposition = "<h4 strong><span  id=\"trainname\" style=\"color:midnightblue\"></span></h4><h5>Current Position :</strong><p style=\"color:green\">" + body.position + "</p></h5>";
     }
+
     $("#currentposition").html(trainposition);
     $("#trainname").html(train_no + " | " + train_name +"<br>"+"Start Date : "+body.start_date);
     var k=0;
