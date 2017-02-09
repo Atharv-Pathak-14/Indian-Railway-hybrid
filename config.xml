@@ -46,6 +46,6 @@
 
 <splash src="img/front.png" />
 
-<preference name="SplashScreenDelay" value="5000" />
+<preference name="SplashScreenDelay" value="6000" />
 
 </widget>

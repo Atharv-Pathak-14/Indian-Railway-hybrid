@@ -18,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
@@ -55,6 +55,16 @@
                 <marker date="1486666449378" expanded="true" signature="3370:3388" ph="..." />
                 <marker date="1486666449378" expanded="true" signature="3528:3544" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="train_route.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train_route.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_route.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="237">
               <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="28" />
               <folding>
                 <marker date="1486663227869" expanded="true" signature="10275:10318" ph="..." />
@@ -160,16 +170,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="livestationstatus.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/livestationstatus.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="11" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="36" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -269,7 +269,6 @@
         <option value="$PROJECT_DIR$/js/trainstartday.js" />
         <option value="$PROJECT_DIR$/js/upcoming_trains_functions.js" />
         <option value="$PROJECT_DIR$/../thirdlast/config.xml" />
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/js/typeaheadtbts.js" />
         <option value="$PROJECT_DIR$/../thirdlast/tbts.m.1.html" />
         <option value="$PROJECT_DIR$/js/ajax_success_error.js" />
@@ -284,6 +283,7 @@
         <option value="$PROJECT_DIR$/js/GetLiveStatusOnClick.js" />
         <option value="$PROJECT_DIR$/js/today.tomorrow.calender.buttons.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -543,15 +543,15 @@
       <workItem from="1486636422870" duration="301000" />
       <workItem from="1486637636216" duration="2676000" />
       <workItem from="1486640366490" duration="16256000" />
-      <workItem from="1486664192446" duration="7781000" />
+      <workItem from="1486664192446" duration="8389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285483000" />
+    <option name="totallyTimeSpent" value="286091000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -807,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stationstatus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -913,21 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_route.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <marker date="1486663227869" expanded="true" signature="10275:10318" ph="..." />
-            <marker date="1486663227869" expanded="true" signature="12954:12997" ph="..." />
-            <marker date="1486663227869" expanded="true" signature="12954:12998" ph="..." />
-            <marker date="1486663227869" expanded="true" signature="13125:13165" ph="..." />
-            <marker date="1486663227869" expanded="true" signature="13422:13433" ph="..." />
-            <marker date="1486663227869" expanded="true" signature="15230:15291" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/trainroute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -959,6 +936,29 @@
             <marker date="1486673076026" expanded="true" signature="22474:22518" ph="..." />
             <marker date="1486673076026" expanded="true" signature="22645:22685" ph="..." />
             <marker date="1486673076026" expanded="true" signature="22944:22955" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_route.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <marker date="1486663227869" expanded="true" signature="10275:10318" ph="..." />
+            <marker date="1486663227869" expanded="true" signature="12954:12997" ph="..." />
+            <marker date="1486663227869" expanded="true" signature="12954:12998" ph="..." />
+            <marker date="1486663227869" expanded="true" signature="13125:13165" ph="..." />
+            <marker date="1486663227869" expanded="true" signature="13422:13433" ph="..." />
+            <marker date="1486663227869" expanded="true" signature="15230:15291" ph="..." />
           </folding>
         </state>
       </provider>
