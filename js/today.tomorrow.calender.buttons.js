@@ -2,7 +2,7 @@
  * Created by kamlesh on 1/26/2017.
  */
 $(document).ready(function() {
-
+    var weeklist=['Mon','Tue','Wed','Thr','Fri','Sat','Sun'];
     var monthNames = ["Jan", "Feb", "March", "April", "May", "June",
         "July", "Aug", "Sept", "Oct", "Nov", "Dec"
     ];
@@ -17,6 +17,7 @@ $(document).ready(function() {
         month = "0" + month;
     }
     year = d.getFullYear();
+    daydiscription = "Today("+weeklist[d.getDay()]+"," + date + " " + monthname + ")";
     $(".today").click(function() {
         // $(this).button('toggle');
         $(".utc").show();
@@ -34,7 +35,7 @@ $(document).ready(function() {
         }
         for_today_or_tommorow=0;
         year = d.getFullYear();
-        daydiscription = "Today(" + date + " " + monthname + ")";
+        daydiscription = "Today("+weeklist[d.getDay()]+"," + date + " " + monthname + ")";
         //console.log("today clicked :" + date + "-" + month + "-" + year);
  submitform();
     });
@@ -56,7 +57,7 @@ $(document).ready(function() {
         year = d.getFullYear();
 
         //console.log("tomorrow clicked:" + date + "-" + month + "-" + year);
-        daydiscription = "Tomorrow (" + date + " " + monthname + ")";
+        daydiscription = "Tomorrow ("+weeklist[d.getDay()]+","  + date + " " + monthname + ")";
         submitform();
     });
     $(".calendaricon").click(function() {

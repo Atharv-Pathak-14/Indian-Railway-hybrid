@@ -318,9 +318,10 @@ body{
             ////console.log(myCalendar.getFormatedDate('%d'+"-"+'%m'));
             date = myCalendar.getFormatedDate('%d');
             month = myCalendar.getFormatedDate('%m');
-            daydiscription = myCalendar.getFormatedDate(' %d %M');
+            daydiscription = myCalendar.getFormatedDate('%l, %d %M');
             //console.log("calender set :" + date + "-" + month + "-" + year);
             for_today_or_tommorow=null;
+            $(".calendaricon").addClass('active').siblings().removeClass('active');
             submitform();
         });
 
@@ -536,9 +537,12 @@ var notgetting_data=false;
             $(".table").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' style='border-radius: 50%;' id='retry_button' onclick='retry_function()'></button>");
         }).then(function(table) {
             if(notgetting_data==false) {
-                $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + "," + daydiscription);
-                $("#upcoming_trains").show();
-
+                $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + ",<br>" + daydiscription);
+                if(for_today_or_tommorow==0) {
+                    $("#upcoming_trains").show();
+                }else{
+                    $("#upcoming_trains").hide();
+                }
             }
             $(".table").html(table);
 
