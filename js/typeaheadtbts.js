@@ -9,7 +9,7 @@ typeof $.typeahead === 'function' && $.typeahead({
     minLength: 1,
     maxItem: 15,
     //order: "asc",
-    hint: true,
+
     offset: true,
     emptyTemplate: 'No result for "{{query}}"',
     display: ["code", "name"],
@@ -35,7 +35,7 @@ typeof $.typeahead === 'function' && $.typeahead({
     minLength: 1,
     maxItem: 15,
     //order: "asc",
-    hint: true,
+    cancelButton: true,
     offset: true,
     emptyTemplate: 'No result for "{{query}}"',
     display: ["code", "name"],

@@ -313,6 +313,7 @@
     </div>
 </div>
 <script>
+   var for_today_or_tommorow = 0;
    var all_coming_train_list=[];
    var all_fav_train_list=[];
    var sourcedetails="";
@@ -322,7 +323,7 @@
         minLength: 1,
         maxItem: 15,
         //order: "asc",
-        hint: true,
+        cancelButton: true,
         offset: true,
         emptyTemplate: 'No result for "{{query}}"',
         display: ["code", "name"],
@@ -383,6 +384,8 @@ function request_live_station_status(sourcedetails,withinhours) {
         $(".table").removeClass("spinner spinn");
         erroroccured=true;
         $( ".status" ).append( error );
+        $(".table").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' style='border-radius: 50%;' id='retry_stnsts' onclick='retry_stnsts()'></button>");
+
     }).then(function (table) {
         if(erroroccured==false) {
             $(".status").html("<h3>All Trains:" + sourcedetails.name + ",in next " + within_hours + " hrs</h3>");
@@ -401,6 +404,11 @@ function request_live_station_status(sourcedetails,withinhours) {
         $( ".status" ).append( "<li>problem :" + error + "</li>" );
     });
 }
+
+function retry_stnsts(){
+    request_live_station_status(sourcedetails,within_hours);
+}
+
 $(document).ready(function () {
 loadhistoryStnSts();
     $("#2hours").click(function() {

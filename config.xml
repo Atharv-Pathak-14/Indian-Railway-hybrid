@@ -18,7 +18,7 @@
     <!--</author>-->
 
    <preference name="orientation" value="portrait" />
-  <preference name="fullscreen" value="true" />
+  <!--<preference name="fullscreen" value="true" />-->
   <preference name="KeepRunning" value="false"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="android-build-tool" value="gradle" />
@@ -44,8 +44,8 @@
 <!--<splash platform="android" qualifier="land-hdpi" src="img/dustbin3.png" />-->
 <!--<splash platform="android" qualifier="land-xhdpi" src="img/dustbin3.png" />-->
 
-<splash src="img/splash.png" />
+<splash src="img/front.png" />
 
-<!--<preference name="SplashScreenDelay" value="2000" />-->
+<preference name="SplashScreenDelay" value="5000" />
 
 </widget>

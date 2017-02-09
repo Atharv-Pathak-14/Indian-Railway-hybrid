@@ -46,7 +46,7 @@ function tablemakerforlivestatus(body,train_no,train_name) {
                     route.schdep + "<br><pp style=\"color:rgba(43,193,25,.55)\">" + route.actdep + "</pp></td><td><pp style=\"color:green\">" + route.latemin + " min</pp></td></tr>";
             } else {
                 livetabledata += "<tr id='" + route.no + "'><td>" + route.no + ".</td><td> " + route.station_.name + "</td><td>" + route.scharr + "<br><pp style=\"color:red\">" + route.actarr + " </pp></td><td>" +
-                    route.schdep + "<br><pp style=\"color:rgba(43,193,25,.55)\">" + route.actdep + "</pp></td><td><pp style=\"color:red\">" + route.latemin + " min</pp></td></tr>";
+                    route.schdep + "<br><pp style=\"color:red\">" + route.actdep + "</pp></td><td><pp style=\"color:red\">" + route.latemin + " min</pp></td></tr>";
             }
         }
 

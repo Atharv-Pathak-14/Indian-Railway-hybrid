@@ -467,6 +467,7 @@ body{
     </div>
 </body>
 <script>
+
     var daydiscription = "Today";
     var sourcedetails = "";
     var destinationdatails = "";
@@ -517,10 +518,12 @@ body{
 
 
     function requesttbts(sourcedetails, destinationdetails) {
+      lastfucntion_clicked_data={'sourcedetails':sourcedetails,'destinationdetails':destinationdetails,'function_name':requesttbts};
 var notgetting_data=false;
         tbts(sourcedetails.code, destinationdetails.code, date, month).then(function(body) {
             //console.log(body);
             favorite_train_list_creator();
+            $(".table").html("");
             $(".table").removeClass("spinner spinn");
             return tablemakertbts(body);
         }, function(error) {
@@ -528,10 +531,12 @@ var notgetting_data=false;
             notgetting_data=true;
             $(".status").html("Problem:"+error );
             //console.log("problem :" + error);
-
+            $("#upcoming_trains").hide();
+            $(".table").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' style='border-radius: 50%;' id='retry_button' onclick='retry_function()'></button>");
         }).then(function(table) {
             if(notgetting_data==false) {
                 $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + "," + daydiscription);
+                $("#upcoming_trains").show();
             }
             $(".table").html(table);
             var intersection_fav = _.intersectionBy(all_train_list, all_fav_train_list, 'number');
@@ -539,7 +544,7 @@ var notgetting_data=false;
                 var id = "." + train.number;
                 $(id).find("#favicon").removeClass('glyphicon glyphicon-heart-empty').addClass('glyphicon glyphicon-heart');
             });
-            $("#upcoming_trains").show();
+
 
         },function (error) {
             $(".table").removeClass("spinner spinn");
@@ -553,6 +558,14 @@ var notgetting_data=false;
 
     }
 
+    function retry_function() {
+
+        $(".status").html("");
+        $(".table").html("");
+        $(".table").addClass("spinner spinn");
+        requesttbts(sourcedetails, destinationdatails);
+
+    }
 
 
 
@@ -591,35 +604,7 @@ var notgetting_data=false;
 
 
 
-/*   $(document).ready(function() {
 
-        var menu = $('.table');
-        var origOffsetY = menu.offset().top;
-        //console.log("this is offset" + origOffsetY);
-
-        function scroll() {
-            //console.log("scroll function on work!!!");
-            if ($(window).scrollTop() > origOffsetY) {
-                // $('.navbar-static-top').addClass('sticky');
-                $('.table').addClass('menu-padding');
-                $('.table').find('thead').addClass('sticky');
-                //   $('.table').find('thead').css('backgroundColor','navy');
-                //   $('.table').find('thead').css('color','white');
-                //    $('.table').find('thead').css('padding-left','1em');
-            } else {
-                //  $('.table').find('thead').css('backgroundColor','white');
-                //  $('.table').find('thead').css('color','black');
-                // $('.navbar-static-top').removeClass('sticky');
-                $('.table').removeClass('menu-padding');
-                $('.table').find('thead').removeClass('sticky');
-            }
-
-
-        }
-
-        document.onscroll = scroll;
-
-    });*/
 </script>
 
 </html>
