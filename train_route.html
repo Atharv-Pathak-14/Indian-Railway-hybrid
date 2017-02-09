@@ -21,7 +21,7 @@
     <script src="js/tablemakerfortbts.js"></script>
     <script src="js/today.tomorrow.calender.buttons.js"></script>
 
-    <script src="js/ajax_success_error.js"></script>
+    <!--<script src="js/ajax_success_error.js"></script>-->
     <script src="js/lodash.min.js"></script>
     <script src="js/trainstartday.js"></script>
     <script src="js/tablemakerfor_livetrainstatus.js"></script>
@@ -355,26 +355,32 @@ function retry_route() {
 
 
 function request_train_route(){
+    founderror=false;
         storinglocally_trainroute(train_details);
         $(".status").html("");
         $(".table").html("");
         $(".table").addClass("spinner spinn");
         trainroute(train_details.number).then(function (body) {
-           //console.log(JSON.stringify(body));
+            console.log(JSON.stringify(body));
            return table_maker_for_train_route(body);
         },function (error) {
+            console.log('error 1');
             $(".table").removeClass("spinner spinn");
-            $(".status").html( "<h3>error</h3>" );
+            $(".status").html( "<h3>"+error+"</h3>" );
             $(".table").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_route' onclick='retry_route()'></button>");
-
-            //console.log(error);
+             founderror=true;
+           // console.log(error);
         }).then(function (alldata) {
             $(".table").removeClass("spinner spinn");
-            $(".status").html( "<h3>"+train_details.number+" | "+train_details.name+""+"<br>"+alldata.weekdata+"</h3>" );
-            $(".table").html(alldata.tabledata);
+           if(founderror==false) {
+               $(".status").html("<h3>" + train_details.number + " | " + train_details.name + "" + "<br>" + alldata.weekdata + "</h3>");
+               $(".table").html(alldata.tabledata);
+           }
+
         }).catch(function (error) {
             $(".status").html( "<h3>Error Requesting:"+train_details.name+"("+train_details.number+")"+"<br> :"+ error+"</h3>" );
-           //console.log(error);
+          // console.log(error);
+            console.log('error 2');
         })
 
 
@@ -391,7 +397,7 @@ function table_maker_for_train_route(body){
             for(var l=0;l<7;l++){
                 if(body.train.days[l].runs=="Y"){
 
-                    weekdata+="<day style='color:rgb(66,44,100);margin-left: 7px;font-size:17px;'>"+weeklist[l]+"</day>";
+                    weekdata+="<day style='color:green;margin-left: 7px;font-size:17px;'>"+weeklist[l]+"</day>";
                 } else if(body.train.days[l].runs=="N"){
 
                     weekdata+="<day style='color:red;margin-left:7px;font-size:17px'>"+weeklist[l]+"</day>";
