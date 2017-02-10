@@ -127,7 +127,7 @@ function dlt_favitem(traindetails){
 
 
 function favtraindelaytime(traindetails){
-    error=false;
+    error_found=false;
 var train_no=traindetails.number;
 var sourcedetails=traindetails.sourcedetails;
 var id="."+traindetails.number;
@@ -138,22 +138,22 @@ $(".table").find(id).find('#statusbutton').html("<span><img src=\"img/loading.sv
         //console.log(body);
         return trainstartday(body,sourcedetails,for_today_or_tommorow);
     },function (error) {
-        error=true;
+        error_found=true;
         $(".table").find(id).find("#trainstatus").append( "<li>problem :" + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
         $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
     }).then(function (tsfulldate) {
         //console.log("this is ur train start date :"+tsfulldate);
-         if(error==false) {
+         if(error_found==false) {
              return livetrainstatus(train_no, tsfulldate);
          }
     },function (error) {
-        error=true;
+        error_found=true;
         $(".table").find(id).find("#trainstatus").append( "<li>problem :" + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
         $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
     }).then(function(body){
-        if(error==false) {
+        if(error_found==false) {
             $(".table").find(id).find('#statusbutton').css("backgroundColor", "");
             $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
             return trainpositiondisplay(body, train_no);
