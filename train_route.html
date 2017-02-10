@@ -246,6 +246,8 @@ function retry_option_livetrain_sts() {
     option_maker_for_live_TrainStatus();
 }
 function option_maker_for_live_TrainStatus(){
+
+    error_found=false;
     $(".status").html( "" );
     storinglocally_trainroute(train_details);
     $(".table").html("");
@@ -254,12 +256,16 @@ function option_maker_for_live_TrainStatus(){
         $(".status").html( "<h3>"+train_details.number+" | "+train_details.name+"</h3>" );
         return days_of_run_finder_for_train(body);
     },function (error) {
+        error_found=true;
         $(".table").removeClass("spinner spinn");
-        $(".table").html("<button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_route' onclick='retry_option_livetrain_sts()'></button>");
+        $(".status").html(error);
+        $(".table").append("<button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_route' onclick='retry_option_livetrain_sts()'></button>");
 
     }).then(function (start_days_list) {
-        $(".table").removeClass("spinner spinn");
-        button_maker_for_list(start_days_list);
+        if(error_found==false) {
+            $(".table").removeClass("spinner spinn");
+            button_maker_for_list(start_days_list);
+        }
         //console.log(start_days_list);
     },function (error) {
         $(".table").removeClass("spinner spinn");
@@ -290,7 +296,7 @@ train_no=train_details.number;
 train_name=train_details.name;
 data_for_retry_option=JSON.stringify({'train_details':train_details,'V_date':V_date});
 
-
+error_found=false;
         $(".tabledata").html("");
         $(".tabledata").addClass("spinner spinn");
         $("#currentposition").html("");
@@ -299,14 +305,16 @@ data_for_retry_option=JSON.stringify({'train_details':train_details,'V_date':V_d
             //console.log(body);
             return livetrainstatus(train_no,V_date);
         },function (error) {
+             error_found=true;
             $(".tabledata").removeClass("spinner spinn");
             $(".tabledata").append( "<li>problem :" + error + "</li>" );
             $(".tabledata").append("<div><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_bydate("+data_for_retry_option+")'></button></div>");
 
          }).then(function(body){
-            $(".tabledata").removeClass("spinner spinn");
-
-            return tablemakerforlivestatus(body,train_no,train_name);
+             if(error_found==false) {
+                 $(".tabledata").removeClass("spinner spinn");
+                 return tablemakerforlivestatus(body, train_no, train_name);
+             }
         },function (error) {
             $(".tabledata").removeClass("spinner spinn");
             $(".tabledata").append( "<li>problem :" + error + "</li>" );
