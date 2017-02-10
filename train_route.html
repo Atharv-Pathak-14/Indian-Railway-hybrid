@@ -255,7 +255,7 @@ function option_maker_for_live_TrainStatus(){
         return days_of_run_finder_for_train(body);
     },function (error) {
         $(".table").removeClass("spinner spinn");
-        $(".table").html("<button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_route' onclick='retry_option_livetrain_sts()'></button>");
+        $(".table").html("<button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_route' onclick='retry_option_livetrain_sts()'></button>");
 
     }).then(function (start_days_list) {
         $(".table").removeClass("spinner spinn");
@@ -301,7 +301,7 @@ data_for_retry_option=JSON.stringify({'train_details':train_details,'V_date':V_d
         },function (error) {
             $(".tabledata").removeClass("spinner spinn");
             $(".tabledata").append( "<li>problem :" + error + "</li>" );
-            $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_bydate("+data_for_retry_option+")'></button></div>");
+            $(".tabledata").append("<div><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_bydate("+data_for_retry_option+")'></button></div>");
 
          }).then(function(body){
             $(".tabledata").removeClass("spinner spinn");
@@ -310,7 +310,7 @@ data_for_retry_option=JSON.stringify({'train_details':train_details,'V_date':V_d
         },function (error) {
             $(".tabledata").removeClass("spinner spinn");
             $(".tabledata").append( "<li>problem :" + error + "</li>" );
-             $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_bydate("+data_for_retry_option+")'></button></div>");
+             $(".tabledata").append("<div><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_bydate("+data_for_retry_option+")'></button></div>");
 
          }).catch(function (error) {
             //console.log("errror caught!!! :"+error);
