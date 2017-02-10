@@ -23,7 +23,7 @@ retry_data=JSON.stringify(traindetails);
     },function (error) {
         $(".tabledata").removeClass("spinner spinn");
         $(".tabledata").append( "<li>problem :" + error + "</li>" );
-        $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
+        $(".tabledata").append("<div align='center'><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
 
     }).then(function (tsfulldate) {
         //console.log("this is ur train start date :"+tsfulldate);
@@ -32,7 +32,7 @@ retry_data=JSON.stringify(traindetails);
     },function (error) {
         $(".tabledata").removeClass("spinner spinn");
         $(".tabledata").html( "<li>problem :" + error + "</li>" );
-        $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
+        $(".tabledata").append("<div align='center'><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
 
     }).then(function(body){
         $(".tabledata").removeClass("spinner spinn");
@@ -41,7 +41,7 @@ retry_data=JSON.stringify(traindetails);
     },function (error) {
         $(".tabledata").removeClass("spinner spinn");
         $(".tabledata").html( "<li>problem :" + error + "</li>" );
-        $(".tabledata").append("<div><button class='btn-primary btn-lg glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
+        $(".tabledata").append("<div align='center'><button class='btn-primary btn-r glyphicon glyphicon-repeat' id='retry_live_stsbyDate' onclick='retry_livests_onclick("+retry_data +")'></button></div>");
 
     }).catch(function (error) {
         //console.log("errror caught!!! :"+error);
