@@ -7,10 +7,10 @@
 
     <!-- versionCode is Android only -->
     <!-- version is in major.minor.patch format -->
-    <name>India Railway Status</name>
+    <name>Indian Railway Train Status</name>
 
     <description>
-        Indian Railway Live Train  Status
+        Indian Railway Live Train  Status gives all information about running trains instances and train between two stations
     </description>
 
     <!--<author href="https://risna.com" email="rishabhnayak76@gmail.com">-->
