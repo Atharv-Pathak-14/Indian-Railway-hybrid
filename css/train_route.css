@@ -179,6 +179,7 @@ CUSTON BTN VALUES
        background-color:rgba(43,193,25,.20);
      }
      .btn-r{
+       border-radius: 100%;
        margin-bottom: 10px;
        height:40px;
        width:40px;
@@ -189,6 +190,7 @@ CUSTON BTN VALUES
        border-radius: 100%;
      }
      .btn-r:active{
+       border-radius: 100%;
        margin-bottom: 3px;
        height:35px;
        width:35px;

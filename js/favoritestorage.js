@@ -34,7 +34,7 @@ function loadmyfavtrains(){
 
     // var itemdisplay="<div id='history'>";
   //  var itemdisplay="<table class=\"table  \"> <thead><h2 class='search'>History<img src='dustbin.png' onclick=\"clear_cache()\" style='float:right' width='30px'></thead>";
-    var itemdisplay = "<table class=\"table table-striped \"> <thead> </thead> <tbody>";
+    var itemdisplay = "<section class=\"table table-striped \"> <section> </section> <section>";
 
     var fetchdata=JSON.parse(localStorage.getItem("mydatafav"));
     try {
@@ -55,10 +55,9 @@ function loadmyfavtrains(){
                     count++;
                     try {
 
-                        itemdisplay += "<tr class='" + fetchdata[k].number + "' style='border:2px solid white '><td id='" + fetchdata[k].number +  "'onclick='getlivestatusonclick("+JSON.stringify(fetchdata[k])+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" +
+                        itemdisplay += "<section class=' " + fetchdata[k].number + "' style=''><section class='row' ><section  class='col-xs-8' id='" + fetchdata[k].number +  "'onclick='getlivestatusonclick("+JSON.stringify(fetchdata[k])+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" +
 
-                            fetchdata[k].name + "<br><strong>" + fetchdata[k].number + "</a></strong><br><p id='trainstatus'></p></td><td>" + "    " +
-                            "</td><td id='delaytime' ><button class='btn btn-primary sharp animated flipInY' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'>Status</button></div></td><td id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-primary sharp animated flipInY' style='margin-left: 20%'><span class='glyphicon glyphicon-trash'></span></button>" + "</td></tr>";
+                            fetchdata[k].name + "<br><strong>" + fetchdata[k].number + "</a></strong><br><p id='trainstatus'></p></section><section class='col-xs-2' id='delaytime' ><button class='btn btn-ra animated glyphicon glyphicon-list-alt flipInY' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'></button></section><section col-xs-2 id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-ra animated glyphicon glyphicon-trash flipInY'></button>" + "</section></section></section>";
 
 
                     }catch(error){

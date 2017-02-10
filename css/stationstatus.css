@@ -192,8 +192,10 @@
        background-color: white;
        color:rgb(66,44,100);
        -webkit-box-shadow: 0 10px 8px -6px #777;
+       border-radius: 100%;
      }
      .btn-r:active{
+       border-radius: 100%;
        margin-bottom: 3px;
        height:35px;
        width:35px;

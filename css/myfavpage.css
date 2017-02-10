@@ -161,23 +161,22 @@ CUSTON BTN VALUES
  .success{
    background-color:rgba(43,193,25,.20);
  }
- .btn-r{
+ .btn-ra{
    margin-bottom: 3px;
    height:40px;
    width:40px;
-   border:1px solid rgb(66,44,100);
+   border:1px solid rgba(66,44,100,0.30);
    background-color: white;
-   color:rgb(66,44,100);
-   border-radius: 100%;
-   -webkit-box-shadow: 0 10px 8px -6px #777;
+   color:rgba(66,44,100,0.60);
+   border-radius: 25%;
  }
- .btn-r:active{
+ .btn-ra:active{
    border-radius: 100%;
    margin-bottom: 3px;
    height:35px;
    width:35px;
-   border:1px solid rgb(66,44,100);
+   border:1px solid rgba(66,44,100,0.30);
    background-color: white;
-   color:rgb(66,44,100);
-   -webkit-box-shadow: 0 10px 8px -6px #777;
+   color:rgba(66,44,100,0.60);
+   border-radius: 25%;
  }
