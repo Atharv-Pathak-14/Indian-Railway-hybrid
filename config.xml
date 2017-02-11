@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.pointdeveloper.myapp"
+        id          = "com.SahuAppsPvtLtd.myTrainEnquiryApp"
         versionCode = "1"
         version     = "1.0.0" >
 
     <!-- versionCode is Android only -->
     <!-- version is in major.minor.patch format -->
-    <name>Indian Railway Train Status</name>
+    <name>Indian Train Status</name>
 
     <description>
         Indian Railway Live Train  Status gives all information about running trains instances and train between two stations
@@ -45,7 +45,7 @@
 <!--<splash platform="android" qualifier="land-xhdpi" src="img/dustbin3.png" />-->
 
 <splash src="img/front.png" />
-
+    <icon src="img/saral.png" platform="android"  />
 <preference name="SplashScreenDelay" value="6000" />
 
 </widget>
