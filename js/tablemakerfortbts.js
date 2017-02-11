@@ -24,7 +24,7 @@ function tablemakertbts(body,today_or_tomorrow) {
                 var traindetails = {'number': train.number, 'name': train.name, 'sourcedetails': sourcedetails};
                 table += "<tr class=" + train.number + "><td><k id='name'  onclick='getlivestatusonclick(" + JSON.stringify(traindetails) + ")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\"><strong>" + train.name + "</strong><br>" + train.number + "</a></k>" +
 
-                    "<k style='padding-left: 10px' class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav(" + JSON.stringify(traindetails) + ")' ></k><p id='weekdays' style='margin-top: 10px'>" + weekdata + "</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time + "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button></div></td></tr>";
+                    "<k style='padding-left: 10px' class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav(" + JSON.stringify(traindetails) + ")' ></k><p id='weekdays' style='margin-top: 10px'>" + weekdata + "</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time + "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button> </div></td></tr>";
 
             });
         }else{
