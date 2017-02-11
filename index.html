@@ -321,7 +321,7 @@ var notgetting_data=false;
         }, function(error) {
             $('.status').html("<li>problem :" + error + "</li>");
             //  $(id ).find('#errormsg').append( "<li>problem :" + error + "</li>" );
-            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button> ");
 
         }).then(function(tsfulldate) {
             //console.log("this is ur train start date :" + tsfulldate);
@@ -329,17 +329,17 @@ var notgetting_data=false;
             return livetrainstatus(train_no, tsfulldate);
         }, function(error) {
             $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
-            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button></button>");
         }).then(function(body) {
             return traindelaytimedisplay(body, train_no);
         }, function(error) {
             $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
-            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button>");
 
         }).catch(function(error) {
             //console.log("errror caught!!! :" + error);
             $(id).find('#errormsg').html("<li>problem :" + error + "</li>");
-            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md' style='border-radius: 45%'><span class='glyphicon glyphicon-time'></span></button>");
+            $(".table").find(id).find("#delaytime").html("<button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button>");
 
         })
     }

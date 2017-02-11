@@ -57,7 +57,7 @@ function loadmyfavtrains(){
 
                         itemdisplay += "<section class=' " + fetchdata[k].number + "' style=''><section class='row' ><section  class='col-xs-8' id='" + fetchdata[k].number +  "'onclick='getlivestatusonclick("+JSON.stringify(fetchdata[k])+")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\">" +
 
-                            fetchdata[k].name + "<br><strong>" + fetchdata[k].number + "</a></strong><br><p id='trainstatus'></p></section><section class='col-xs-2' id='delaytime' ><button class='btn btn-ra animated glyphicon glyphicon-list-alt flipInY' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'></button></section><section col-xs-2 id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-ra animated glyphicon glyphicon-trash flipInY'></button>" + "</section></section></section>";
+                            fetchdata[k].name + "<br><strong>" + fetchdata[k].number + "</a></strong><br><p id='trainstatus'></p></section><section class='col-xs-2' id='delaytime' ><button class='btn btn-ra animated glyphicon glyphicon-map-marker flipInY' id='statusbutton' onclick='favtraindelaytime(" + JSON.stringify(fetchdata[k]) + ")'></button></section><section col-xs-2 id='favicon' onclick='dlt_favitem(" + JSON.stringify(fetchdata[k])+")'>" + " <button class='btn btn-ra animated glyphicon glyphicon-trash flipInY'></button>" + "</section></section></section>";
 
 
                     }catch(error){
@@ -131,7 +131,7 @@ var train_no=traindetails.number;
 var sourcedetails=traindetails.sourcedetails;
 var id="."+traindetails.number;
     $(".table").find(id).find('#statusbutton').css("backgroundColor","white");
-$(".table").find(id).find('#statusbutton').html("<span><img src=\"img/loading.svg\" style=\"height: 30px\"></span>");
+$(".table").find(id).find('#statusbutton').html("<span><img src=\"img/loading.svg\" style='height: 30px;width:20px;margin-left:-40px;margin-top:-5px;padding-left:3px;'></span>");
 //console.log(id);
     trainroute(train_no).then(function (body) {
         //console.log(body);
@@ -140,7 +140,7 @@ $(".table").find(id).find('#statusbutton').html("<span><img src=\"img/loading.sv
         error_found=true;
         $(".table").find(id).find("#trainstatus").append( "<li>problem :" + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
-        $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
+        $(".table").find(id).find('#statusbutton').html("<span></span>");
     }).then(function (tsfulldate) {
         //console.log("this is ur train start date :"+tsfulldate);
          if(error_found==false) {
@@ -150,22 +150,22 @@ $(".table").find(id).find('#statusbutton').html("<span><img src=\"img/loading.sv
         error_found=true;
         $(".table").find(id).find("#trainstatus").append( "<li>problem :" + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
-        $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
+        $(".table").find(id).find('#statusbutton').html("<span></span>");
     }).then(function(body){
         if(error_found==false) {
             $(".table").find(id).find('#statusbutton').css("backgroundColor", "");
-            $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
+            $(".table").find(id).find('#statusbutton').html("<span></span>");
             return trainpositiondisplay(body, train_no);
         }
     },function (error) {
         $(".table").find(id).find("#trainstatus").append( "<li>problem :" + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
-        $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
+        $(".table").find(id).find('#statusbutton').html("<span></span>");
     }).catch(function (error) {
         //console.log("errror caught!!! :"+error);
         $(".table").find(id).find("#trainstatus").append( "<li>problem : " + error + "</li>" );
         $(".table").find(id).find('#statusbutton').css("backgroundColor","");
-        $(".table").find(id).find('#statusbutton').html("<span>Status</span>");
+        $(".table").find(id).find('#statusbutton').html("<span></span>");
     })
 }
 
