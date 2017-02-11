@@ -6,24 +6,24 @@ h1 {
     margin: 0% 0% 0% 50%;
     height: 160em;
     width: 1.5em;
-    background-color: blue;
+    background-color: rgb(66,44,100);
     -webkit-animation: spinny 1s reverse infinite;
 }
 .spinn {
     margin: 0% 0% 0% 50%;
     height: 3em;
     width: .05em;
-    background-color: blue;
+    background-color: rgb(66,44,100);
     -webkit-animation: spinny 1s reverse infinite;
 }
 @-webkit-keyframes spinny {
     0% {
         -webkit-transform: rotate(450deg) scale(1);
-        background-color: green;
+        background-color: rgb(66,44,100);
     }
     100% {
         -webkit-transform: rotate(90deg) scale(1);
-        background-color: blue;
+        background-color: rgb(66,44,100);
     }
 }
 .refresh {

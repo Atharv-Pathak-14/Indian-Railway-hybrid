@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="css/animate.css">
       <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/button_sharp.css">
       <link rel="stylesheet" href="font.css">
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="typeahead/jquery.typeahead.min.js"></script>
@@ -86,7 +87,7 @@
         <nav class="container-fluid navbar-fixed-top ">
             <ul class="ul row">
                 <li class="col-xs-12 title" style="font-size:25px">
-                  <img src="img/saral.png" width="36px" height="36px" style="border:0px solid white;border-radius:5px;" class="icon">&nbsp;&nbsp;&nbsp;INDIAN RAILWAYS
+                  <img src="img/saral.png" width="36px" height="36px" style="border:1px solid rgb(66,44,100);border-radius:10px;" class="icon">&nbsp;&nbsp;&nbsp;INDIAN RAILWAYS
                 </li>
                 <li class="col-xs-3" style="font-size:17px">
                     <a href="index.html" style="color:white;font-family:'hello';" class="under">SEARCH</a>
@@ -171,7 +172,7 @@
     </div>
     <!--train b/wstation table-->
     <div class="mainpage container-fluid" style="background-color:rgb(244,244,244);">
-      <div  class="status" style="-webkit-box-shadow: 0 10px 6px -6px #777">
+      <div  class="status">
           <p id="success"></p>
       </div>
 
@@ -271,7 +272,7 @@ var notgetting_data=false;
             $(".table").html("<button class='btn-primary btn-r glyphicon glyphicon-repeat'  id='retry_button' onclick='retry_function()'></button>");
         }).then(function(table) {
             if(notgetting_data==false) {
-                $(".status").html(sourcedetails.name + " --- " + destinationdetails.name + ",<br>" + daydiscription);
+                $(".status").html(sourcedetails.name  + "<span class=' glyphicon glyphicon-menu-right' style='margin-right:20px;margin-left:20px;font-size:15.5px'></span>"+ destinationdetails.name + "<br>" + daydiscription);
                 if(for_today_or_tommorow==0) {
                     $("#upcoming_trains").show();
                 }else{

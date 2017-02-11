@@ -17,14 +17,14 @@ function tablemakertbts(body,today_or_tomorrow) {
                         weekdata += "<day style='color:navy;margin-left: 7px' >" + weeklist[k] + "</day>";
                     } else if ((train.days[k].runs == "N")) {
 
-                        weekdata += "<day style='color:rgba(247,27,86,0.99);margin-left:7px'>" + weeklist[k] + "</day>";
+                        weekdata += "<day style='color:rgba(247,27,86,0.5);margin-left:7px'>" + weeklist[k] + "</day>";
                     }
                 }
                 weekdata += "</h7>";
                 var traindetails = {'number': train.number, 'name': train.name, 'sourcedetails': sourcedetails};
                 table += "<tr class=" + train.number + "><td><k id='name'  onclick='getlivestatusonclick(" + JSON.stringify(traindetails) + ")' type=\"text\"  data-toggle=\"modal\" data-target=\"#myModal\" ><a href=\"#\"><strong>" + train.name + "</strong><br>" + train.number + "</a></k>" +
 
-                    "<k style='padding-left: 10px' class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav(" + JSON.stringify(traindetails) + ")' ></k><p id='weekdays' style='margin-top: 10px'>" + weekdata + "</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time + "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md' style='border-radius: 55%'><span class='glyphicon glyphicon-time'></span></button></div></td></tr>";
+                    "<k style='padding-left: 10px' class='glyphicon glyphicon-heart-empty' id='favicon' onclick='savefav(" + JSON.stringify(traindetails) + ")' ></k><p id='weekdays' style='margin-top: 10px'>" + weekdata + "</p><p id='errormsg'></p></td><td><p id='schdep'>" + train.src_departure_time + "</p><p id='actdep'>" + "</p></td><td>" + train.dest_arrival_time + "</td><td id='delaytime' onclick='gettraindelaytime(" + train.number + ")'><button class='btn btn-default btn-md glyphicon glyphicon-time' style='border-radius: 100%;border:1px solid rgba(66,44,100,0.4)'></button></div></td></tr>";
 
             });
         }else{
