@@ -2,7 +2,7 @@
  * Created by kamlesh on 1/26/2017.
  */
 $(document).ready(function() {
-    var weeklist=['Mon','Tue','Wed','Thr','Fri','Sat','Sun'];
+    var weeklist=['Sun','Mon','Tue','Wed','Thr','Fri','Sat'];
     var monthNames = ["Jan", "Feb", "March", "April", "May", "June",
         "July", "Aug", "Sept", "Oct", "Nov", "Dec"
     ];

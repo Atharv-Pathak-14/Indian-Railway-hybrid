@@ -10,7 +10,7 @@ function tbts(src,dst,date,month) {
         $.ajax({
             url:url,
             cache: false,
-            timeout:5000,
+            timeout:7000,
             success:function (body, status) {
                 if (status == "success") {
                 if (body.response_code == 200) {

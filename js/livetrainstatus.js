@@ -11,7 +11,7 @@ function livetrainstatus(train_no,fulldate) {
         $.ajax({
             url:url,
             cache: false,
-            timeout:5000,
+            timeout:7000,
             success:function (body, status) {
                 if(status=="success") {
                     if(body.response_code==200) {
